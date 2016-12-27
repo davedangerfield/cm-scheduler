@@ -1,0 +1,28 @@
+<div class="day-view">
+
+  <div class="left-sidebar">
+    <select>
+      <option>Form I</option>
+      <option>Form IIA</option>
+      <option>Form III</option>
+    </select>
+
+    <app-time-list></app-time-list>
+  </div>
+  
+
+  <div class="days">
+
+    <div class="day">
+      <div class="day-header">Monday</div>
+      <app-card-list [cards]="cards"></app-card-list>
+    </div>
+
+    <div class="day">
+      <div class="day-header">Tuesday</div>
+      <app-card-list [cards]="cards"></app-card-list>
+    </div>
+
+  </div>
+
+</div>

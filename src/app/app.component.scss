@@ -1,4 +1,7 @@
-body {
-    display: flex;
-    flex-direction: row;
+* {
+  box-sizing: border-box;
+}
+
+.body {
+  background-color: #ddd;
 }

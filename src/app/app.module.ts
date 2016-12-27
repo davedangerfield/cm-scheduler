@@ -7,13 +7,17 @@ import { AppComponent } from './app.component';
 import { CardComponent } from './card/card.component';
 import { CardListComponent } from './card-list/card-list.component';
 import { TimeListComponent } from './time-list/time-list.component';
+import { DayViewComponent } from './day-view/day-view.component';
+import { FormViewComponent } from './form-view/form-view.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CardComponent,
     CardListComponent,
-    TimeListComponent
+    TimeListComponent,
+    DayViewComponent,
+    FormViewComponent
   ],
   imports: [
     BrowserModule,

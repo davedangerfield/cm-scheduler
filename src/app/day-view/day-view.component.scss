@@ -1,0 +1,30 @@
+.day-view {
+  display: flex;
+  flex-direction: row;
+
+	.left-sidebar {
+		width: 15%;
+	}
+	
+	select {
+		height: 35px;
+		width: 100%;
+
+	}
+
+	.days {
+		display: flex;
+		flex-direction: row;
+		width: 85%;
+
+		.day-header {
+			background-color: black;
+			color: white;
+			height: 35px;
+			text-align: center;
+			padding: 1%;
+		}
+	}
+
+
+}

@@ -1,13 +1,10 @@
-<p>
-  card works!
-</p>
-
-<pre>{{cardData | json}}</pre>
-
-<li>
-  {{cardData.activityTypeSymbol}} {{cardData.title}} minutes 
-</li>
-
+<!--<pre>{{cardData | json}}</pre>-->
+<div>
+  {{activityTypeSymbol(cardData.activityType)}} {{cardData.title}}
+  <br/>
+  <br/>
+   Form {{cardData.formLevel}}: {{cardData.daysPerWeek}}x per week, {{cardData.duration}} minutes
+</div>
 
 <!--
 function createCard(item) {

@@ -3,6 +3,8 @@ import {
   Input, 
   OnInit } from '@angular/core';
 
+import { ActivityType } from '../shared/enums/';
+
 @Component({
   selector: 'app-card',
   templateUrl: './card.component.html',
@@ -17,4 +19,18 @@ export class CardComponent implements OnInit {
   ngOnInit() {
   }
 
+  activityTypeSymbol(activityType: ActivityType) {
+    if (activityType === ActivityType.AT) {
+      return '@';
+    }
+    if (activityType === ActivityType.BLANK) {
+      return '';
+    }
+    if (activityType === ActivityType.MINUS) {
+      return '-';
+    }
+    if (activityType === ActivityType.PLUS) {
+      return '+';
+    }
+  }
 }

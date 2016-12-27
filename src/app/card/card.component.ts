@@ -5,8 +5,8 @@ import {
 
 import { 
   ActivityType,
-  Form } from '../shared/enums/';
-import { Card } from '../shared/model/';
+  Form } from '../shared/enums';
+import { Card } from '../shared/model';
 
 @Component({
   selector: 'app-card',

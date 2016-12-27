@@ -1,11 +1,9 @@
 <!--<pre>{{cardData | json}}</pre>-->
-<div>
+<div [style.height.px] = "cardData.duration * 5" [style.background-color] = "backgroundColor(cardData)">
   {{activityTypeSymbol(cardData.activityType)}} {{cardData.title}}
-  <br/>
   <br/>
    Form {{cardData.formLevel}}: {{cardData.daysPerWeek}}x per week, {{cardData.duration}} minutes
 </div>
-
 <!--
 function createCard(item) {
     var li = document.createElement("li");

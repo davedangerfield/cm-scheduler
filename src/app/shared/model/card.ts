@@ -1,4 +1,4 @@
-import { ActivityType, Form, Involvement } from './enums';
+import { ActivityType, Form, Involvement } from '../enums';
 
 export interface Card {
 	activityType: ActivityType,

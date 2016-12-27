@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { Card } from './shared/card';
+import { Card } from './shared/model/';
 import { ActivityType, Form, Involvement } from './shared/enums';
 
 @Component({

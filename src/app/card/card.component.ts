@@ -3,7 +3,10 @@ import {
   Input, 
   OnInit } from '@angular/core';
 
-import { ActivityType } from '../shared/enums/';
+import { 
+  ActivityType,
+  Form } from '../shared/enums/';
+import { Card } from '../shared/model/';
 
 @Component({
   selector: 'app-card',
@@ -19,18 +22,22 @@ export class CardComponent implements OnInit {
   ngOnInit() {
   }
 
+  backgroundColor(card: Card) {
+    var backgroundColorMap = {
+      [Form.I]: 'red',
+      [Form.IIA]: 'yellow',
+      [Form.III]: 'blue',
+    }
+    return backgroundColorMap[card.formLevel];
+  }
+
   activityTypeSymbol(activityType: ActivityType) {
-    if (activityType === ActivityType.AT) {
-      return '@';
-    }
-    if (activityType === ActivityType.BLANK) {
-      return '';
-    }
-    if (activityType === ActivityType.MINUS) {
-      return '-';
-    }
-    if (activityType === ActivityType.PLUS) {
-      return '+';
-    }
+    var activityTypeSymbolMap = {
+      [ActivityType.AT]:'@', 
+      [ActivityType.BLANK]:'',
+      [ActivityType.MINUS]:'-',
+      [ActivityType.PLUS]:'+'
+    };
+    return activityTypeSymbolMap[activityType];
   }
 }

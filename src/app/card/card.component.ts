@@ -23,14 +23,15 @@ export class CardComponent implements OnInit {
   }
 
   height() {
-    return this.cardData.duration * 5;
+    const HEIGHT_PIXELS_PER_MINUTE = 5;
+    return this.cardData.duration * HEIGHT_PIXELS_PER_MINUTE;
   }
 
   backgroundColor() {
     var backgroundColorMap = {
-      [Form.I]: 'red',
-      [Form.IIA]: 'yellow',
-      [Form.III]: 'blue',
+      [Form.I]: '#05fc70',
+      [Form.IIA]: '#5ed9ff',
+      [Form.III]: '#fcd305',
     }
     return backgroundColorMap[this.cardData.formLevel];
   }

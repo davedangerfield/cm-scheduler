@@ -15,29 +15,33 @@ import { Card } from '../shared/model/';
 })
 export class CardComponent implements OnInit {
 
-  @Input() cardData: {};
+  @Input() cardData: Card;
 
   constructor() { }
 
   ngOnInit() {
   }
 
-  backgroundColor(card: Card) {
+  height() {
+    return this.cardData.duration * 5;
+  }
+
+  backgroundColor() {
     var backgroundColorMap = {
       [Form.I]: 'red',
       [Form.IIA]: 'yellow',
       [Form.III]: 'blue',
     }
-    return backgroundColorMap[card.formLevel];
+    return backgroundColorMap[this.cardData.formLevel];
   }
 
-  activityTypeSymbol(activityType: ActivityType) {
+  activityTypeSymbol() {
     var activityTypeSymbolMap = {
       [ActivityType.AT]:'@', 
       [ActivityType.BLANK]:'',
       [ActivityType.MINUS]:'-',
       [ActivityType.PLUS]:'+'
     };
-    return activityTypeSymbolMap[activityType];
+    return activityTypeSymbolMap[this.cardData.activityType];
   }
 }

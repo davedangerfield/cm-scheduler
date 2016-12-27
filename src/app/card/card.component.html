@@ -1,6 +1,6 @@
 <!--<pre>{{cardData | json}}</pre>-->
-<div [style.height.px] = "cardData.duration * 5" [style.background-color] = "backgroundColor(cardData)">
-  {{activityTypeSymbol(cardData.activityType)}} {{cardData.title}}
+<div [style.height.px] = "height()" [style.background-color] = "backgroundColor()">
+  {{activityTypeSymbol()}} {{cardData.title}}
   <br/>
    Form {{cardData.formLevel}}: {{cardData.daysPerWeek}}x per week, {{cardData.duration}} minutes
 </div>

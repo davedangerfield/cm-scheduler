@@ -11,7 +11,7 @@ import { ActivityType, Form, Involvement } from './shared/enums';
 export class AppComponent {
   title = 'app works!';
 
-  cards: Array<Card> = [
+  cards: Card[] = [
     {
       activityType: ActivityType.AT,
       formLevel: Form.I,

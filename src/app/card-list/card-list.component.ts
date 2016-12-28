@@ -9,7 +9,7 @@ import { Card } from '../shared/model';
 })
 export class CardListComponent implements OnInit {
 
-  @Input() cards: Array<Card>;
+  @Input() cards: Card[];
 
   constructor() { }
 

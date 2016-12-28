@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TimeListComponent implements OnInit {
 
-  times: Array<string> = [
+  times: string[] = [
     '0:00',
     '0:10',
     '0:20',

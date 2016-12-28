@@ -11,7 +11,7 @@
   <div class="days">
 
     <div *ngFor="let day of days">
-      <div class="day-header">{{dayName(day)}}</div>
+      <div class="day-header" [routerLink]="'/form'" (click)="changeToFormView($event)">{{dayName(day)}}</div>
       <app-card-list [cards]="selectedFormFilter(cards)"></app-card-list>
     </div>
 

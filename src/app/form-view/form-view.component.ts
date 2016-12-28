@@ -42,4 +42,7 @@ export class FormViewComponent implements OnInit {
     return this.cards.filter(card => card.daysPerWeek == 3);
   }
 
+  changeToDayView(ev) {
+    console.log(ev.target.textContent);
+  }
 }

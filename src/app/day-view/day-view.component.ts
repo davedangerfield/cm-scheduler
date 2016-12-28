@@ -40,4 +40,8 @@ export class DayViewComponent implements OnInit {
   selectedFormFilter() {
     return this.cards.filter(card => card.formLevel == this.selectedForm);
   }
+
+  changeToFormView(ev) {
+    console.log(ev.target.textContent);
+  }
 }

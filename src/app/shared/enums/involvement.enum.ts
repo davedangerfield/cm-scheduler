@@ -1,5 +1,5 @@
-export enum Involvement {
-	"CRESENT" = 1,
-	"HALF" = 2,
-	"FULL" = 3,
+export const enum Involvement {
+	'CRESENT',
+	'HALF',
+	'FULL',
 }

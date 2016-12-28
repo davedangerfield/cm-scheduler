@@ -1,4 +1,4 @@
-export const enum Involvement {
+export enum Involvement {
 	'CRESENT',
 	'HALF',
 	'FULL',

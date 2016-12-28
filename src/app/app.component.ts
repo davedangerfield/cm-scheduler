@@ -1,49 +1,47 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 import { Card } from './shared/model';
-import { ActivityType, Form, Involvement } from './shared/enums';
+import { ActivityType, activityTypeFromSymbol, Form, Involvement } from './shared/enums';
+import { formI, formIIA, formIII } from './shared/data';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
-  title = 'app works!';
+export class AppComponent implements OnInit {
 
-  cards: Card[] = [
-    {
-      activityType: ActivityType.AT,
+  cards: Card[];
+
+  ngOnInit() {
+    var formICards = formI.map(item => (<Card> {
+      activityType: activityTypeFromSymbol(item.symbol),
       formLevel: Form.I,
-      title: 'Copywork',
-      daysPerWeek: 5,
-      duration: 10,
-      teacherInvolvement: Involvement.CRESENT
-    },
-    {
-      activityType: ActivityType.MINUS,
+      title: item.text,
+      daysPerWeek: item.reps,
+      duration: item.time,
+      teacherInvolvement: item.parentInvolvement,
+    }));
+    
+    var formIIACards = formIIA.map(item => (<Card> {
+      activityType: activityTypeFromSymbol(item.symbol),
       formLevel: Form.IIA,
-      title: 'Blah',
-      daysPerWeek: 3,
-      duration: 40,
-      teacherInvolvement: Involvement.FULL
-    },
-    {
-      activityType: ActivityType.MINUS,
+      title: item.text,
+      daysPerWeek: Number(item.reps),
+      duration: Number(item.time),
+      teacherInvolvement: Number(item.parent),
+    }));
+    
+    var formIIICards = formIII.map(item => (<Card> {
+      activityType: activityTypeFromSymbol(item.symbol),
       formLevel: Form.III,
-      title: 'Blah 2',
-      daysPerWeek: 3,
-      duration: 25,
-      teacherInvolvement: Involvement.HALF
-    },
-    {
-      activityType: ActivityType.PLUS,
-      formLevel: Form.IIA,
-      title: 'Blah',
-      daysPerWeek: 4,
-      duration: 20,
-      teacherInvolvement: Involvement.FULL
-    }
-  ];
-  
+      title: item.text,
+      daysPerWeek: item.reps,
+      duration: item.time,
+      teacherInvolvement: item.parentInvolvement,
+    }));
+
+    this.cards = [].concat(formICards, formIIACards, formIIICards);
+  }
+
 }

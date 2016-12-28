@@ -1,11 +1,6 @@
-import { 
-  Component,
-  Input, 
-  OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
-import { 
-  ActivityType,
-  Form } from '../shared/enums';
+import { ActivityType, Form } from '../shared/enums';
 import { Card } from '../shared/model';
 
 @Component({

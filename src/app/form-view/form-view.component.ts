@@ -1,4 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router, ActivatedRoute, Params } from '@angular/router';
+import 'rxjs/add/operator/switchMap';
 
 import { Card } from '../shared/model';
 import { Day, weekDays, Form, allForms } from '../shared/enums';
@@ -16,11 +18,15 @@ export class FormViewComponent implements OnInit {
   private forms: Form[] = allForms;
   private days: Day[] = weekDays;
   
-  constructor(private formDataService: FormDataService) { 
-  }
+  constructor(
+    private formDataService: FormDataService,
+    private route: ActivatedRoute,
+    private router: Router,
+  ) { }
 
   ngOnInit() {
-    this.selectedDay = this.days[0];
+    var dayId = Number(this.route.snapshot.params['dayId']);
+    this.selectedDay = dayId > -1 ? this.days[dayId] : this.days[0];
     this.cards = this.formDataService.cards;
   }
   

@@ -1,7 +1,7 @@
 <div class="form-view">
 
   <div class="left-sidebar">
-    <select (change)="onChangeDay($event.target.value)">
+    <select [ngModel]="selectedDay" (ngModelChange)="onChangeDay($event)">
       <option *ngFor="let day of days" [value]="day">{{dayName(day)}}</option>
     </select>
 

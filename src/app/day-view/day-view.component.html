@@ -1,26 +1,18 @@
 <div class="day-view">
 
   <div class="left-sidebar">
-    <select>
-      <option>Form I</option>
-      <option>Form IIA</option>
-      <option>Form III</option>
+    <select (change)="onChangeForm($event.target.value)">
+      <option *ngFor="let form of forms" [value]="form">Form {{formName(form)}}</option>
     </select>
 
     <app-time-list></app-time-list>
   </div>
   
-
   <div class="days">
 
-    <div class="day">
-      <div class="day-header">Monday</div>
-      <app-card-list [cards]="cards"></app-card-list>
-    </div>
-
-    <div class="day">
-      <div class="day-header">Tuesday</div>
-      <app-card-list [cards]="cards"></app-card-list>
+    <div *ngFor="let day of ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday']">
+      <div class="day-header">{{day}}</div>
+      <app-card-list [cards]="formFilter(cards)"></app-card-list>
     </div>
 
   </div>

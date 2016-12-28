@@ -7,10 +7,13 @@ import { formI, formIIA, formIII } from './data';
 @Injectable()
 export class FormDataService {
 
-  public readonly cards: Card[];
+  public cards: Card[] = [];
 
   constructor() { 
+    this.init();
+  }
 
+  init() {
     var formICards = formI.map(item => (<Card> {
       activityType: activityTypeFromSymbol(item.symbol),
       formLevel: Form.I,
@@ -40,5 +43,4 @@ export class FormDataService {
 
     this.cards = [].concat(formICards, formIIACards, formIIICards);
   }
-
 }

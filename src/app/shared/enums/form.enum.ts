@@ -3,3 +3,5 @@ export enum Form {
 	'IIA',
 	'III',
 }
+
+export const allForms = [Form.I, Form.IIA, Form.III];

@@ -1,3 +1,20 @@
-<p>
-  form-view works!
-</p>
+<div class="form-view">
+
+  <div class="left-sidebar">
+    <select (change)="onChangeDay($event.target.value)">
+      <option *ngFor="let day of days" [value]="day">{{dayName(day)}}</option>
+    </select>
+
+    <app-time-list></app-time-list>
+  </div>
+  
+  <div class="forms">
+
+    <div *ngFor="let form of forms">
+      <div class="form-header">Form {{formName(form)}}</div>
+      <app-card-list [cards]="selectedDayFilter(cards)"></app-card-list>
+    </div>
+
+  </div>
+
+</div>

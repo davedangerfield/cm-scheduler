@@ -1,0 +1,30 @@
+.form-view {
+  display: flex;
+  flex-direction: row;
+
+	.left-sidebar {
+		width: 15%;
+	}
+	
+	select {
+		height: 35px;
+		width: 100%;
+
+	}
+
+	.forms {
+		display: flex;
+		flex-direction: row;
+		width: 85%;
+
+		.form-header {
+			background-color: black;
+			color: white;
+			height: 35px;
+			text-align: center;
+			padding: 1%;
+		}
+	}
+
+
+}

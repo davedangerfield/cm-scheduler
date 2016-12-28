@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 
 import { Card } from '../shared/model';
-import { Form } from '../shared/enums';
+import { Day, weekDays, Form, allForms } from '../shared/enums';
 
 @Component({
   selector: 'app-day-view',
@@ -13,12 +13,17 @@ export class DayViewComponent implements OnInit {
   @Input() cards: Card[];
   
   private selectedForm: Form;
-  private forms: Form[] = [Form.I, Form.IIA, Form.III];
-
+  private forms: Form[] = allForms;
+  private days: Day[] = weekDays;
+  
   constructor() { }
 
   ngOnInit() {
     this.selectedForm = this.forms[0];
+  }
+
+  dayName(day: Day) {
+    return Day[day];
   }
 
   formName(form: Form) {

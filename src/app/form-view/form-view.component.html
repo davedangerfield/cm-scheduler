@@ -10,8 +10,8 @@
   
   <div class="forms">
 
-    <div *ngFor="let form of forms">
-      <div class="form-header" [routerLink]="'/day'" (click)="changeToDayView($event)">Form {{formName(form)}}</div>
+    <div *ngFor="let form of forms; let i = index;">
+      <div class="form-header" [routerLink]="['/day', { formId: i }]" (click)="changeToDayView($event)">Form {{formName(form)}}</div>
       <app-card-list [cards]="selectedDayFilter(form)"></app-card-list>
     </div>
 

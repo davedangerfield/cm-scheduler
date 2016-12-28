@@ -51,6 +51,6 @@ export class DayViewComponent implements OnInit {
   }
 
   changeToFormView(ev) {
-    console.log(ev.target.textContent);
+    // console.log(ev.target.textContent);
   }
 }

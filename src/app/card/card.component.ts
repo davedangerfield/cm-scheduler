@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 import { ActivityType, Form } from '../shared/enums';
 import { Card } from '../shared/model';
@@ -8,14 +8,9 @@ import { Card } from '../shared/model';
   templateUrl: './card.component.html',
   styleUrls: ['./card.component.scss']
 })
-export class CardComponent implements OnInit {
+export class CardComponent {
 
   @Input() cardData: Card;
-
-  constructor() { }
-
-  ngOnInit() {
-  }
 
   height() {
     const HEIGHT_PIXELS_PER_MINUTE = 5;

@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 import { Card } from '../shared/model';
 
@@ -7,13 +7,8 @@ import { Card } from '../shared/model';
   templateUrl: './card-list.component.html',
   styleUrls: ['./card-list.component.scss']
 })
-export class CardListComponent implements OnInit {
+export class CardListComponent {
 
   @Input() cards: Card[];
-
-  constructor() { }
-
-  ngOnInit() {
-  }
 
 }

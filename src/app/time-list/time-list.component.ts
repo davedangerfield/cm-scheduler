@@ -1,11 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-time-list',
   templateUrl: './time-list.component.html',
   styleUrls: ['./time-list.component.scss']
 })
-export class TimeListComponent implements OnInit {
+export class TimeListComponent {
 
   times: string[] = [
     '0:00',
@@ -34,10 +34,5 @@ export class TimeListComponent implements OnInit {
     '3:50',
     '4:00',
   ];
-
-  constructor() { }
-
-  ngOnInit() {
-  }
 
 }

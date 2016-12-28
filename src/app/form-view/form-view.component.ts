@@ -17,7 +17,6 @@ export class FormViewComponent implements OnInit {
   private days: Day[] = weekDays;
   
   constructor(private formDataService: FormDataService) { 
-    this.formDataService = formDataService;
   }
 
   ngOnInit() {

@@ -5,9 +5,9 @@ import { FormViewComponent } from './form-view/form-view.component';
 import { DayViewComponent } from './day-view/day-view.component';
 
 const routes: Routes = [
-  {path: '', redirectTo: 'day', pathMatch: 'full' },
   {path: 'day', component: DayViewComponent},
   {path: 'form', component: FormViewComponent},
+  {path: '', redirectTo: 'day', pathMatch: 'full' },
   {path: '**', redirectTo: '/day' }
 ];
 

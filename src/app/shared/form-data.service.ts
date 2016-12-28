@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 
 import { Card } from './model';
-import { ActivityType, activityTypeFromSymbol, Form, Involvement } from './enums';
+import { ActivityType, activityTypeFromSymbol, weekDays, Form, Involvement } from './enums';
 import { formI, formIIA, formIII } from './data';
 
 @Injectable()
@@ -40,7 +40,23 @@ export class FormDataService {
       duration: item.time,
       teacherInvolvement: item.parentInvolvement,
     }));
+    var initialCards = [].concat(formICards, formIIACards, formIIICards);
 
-    this.cards = [].concat(formICards, formIIACards, formIIICards);
+    this.cards = initialCards.reduce((acc, card) => {
+      var cardsToAdd: Card[] = [];
+      
+      for (var i = 0; i < card.daysPerWeek; i++) {
+        cardsToAdd.push(<Card>{
+          activityType: card.activityType,
+          formLevel: card.formLevel,
+          title: card.title,
+          daysPerWeek: card.daysPerWeek,
+          duration: card.duration,
+          teacherInvolvement: card.teacherInvolvement,
+          day: weekDays[i]
+        });
+      }
+      return acc.concat(cardsToAdd);
+    }, []);
   }
 }

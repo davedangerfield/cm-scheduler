@@ -42,9 +42,8 @@ export class FormViewComponent implements OnInit {
     this.selectedDay = selection;
   }
 
-  selectedDayFilter(form) {
-    // TODO: check against this.selectedDay
-    return this.cards.filter(card => (card.daysPerWeek == 3) && (card.formLevel == form));
+  selectedDayFilter(form: Form) {
+    return this.cards.filter(card => (card.day == this.selectedDay) && (card.formLevel == form));
   }
 
   changeToDayView(ev) {

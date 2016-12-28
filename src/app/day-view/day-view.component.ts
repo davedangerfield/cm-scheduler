@@ -46,8 +46,8 @@ export class DayViewComponent implements OnInit {
     this.selectedForm = selection;
   }
 
-  selectedFormFilter() {
-    return this.cards.filter(card => card.formLevel == this.selectedForm);
+  selectedFormFilter(day: Day) {
+    return this.cards.filter(card => (card.formLevel == this.selectedForm) && (card.day === day));
   }
 
   changeToFormView(ev) {

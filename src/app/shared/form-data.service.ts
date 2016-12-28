@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 
 import { Card } from './model';
-import { ActivityType, activityTypeFromSymbol, weekDays, Form, Involvement } from './enums';
+import { ActivityType, activityTypeFromSymbol, Day, weekDays, Form, Involvement } from './enums';
 import { formI, formIIA, formIII } from './data';
 
 @Injectable()
@@ -40,23 +40,40 @@ export class FormDataService {
       duration: item.time,
       teacherInvolvement: item.parentInvolvement,
     }));
+    
     var initialCards = [].concat(formICards, formIIACards, formIIICards);
 
-    this.cards = initialCards.reduce((acc, card) => {
+    this.cards = initialCards.reduce((acc, card: Card) => {
       var cardsToAdd: Card[] = [];
       
-      for (var i = 0; i < card.daysPerWeek; i++) {
-        cardsToAdd.push(<Card>{
-          activityType: card.activityType,
-          formLevel: card.formLevel,
-          title: card.title,
-          daysPerWeek: card.daysPerWeek,
-          duration: card.duration,
-          teacherInvolvement: card.teacherInvolvement,
-          day: weekDays[i]
-        });
+      if (card.daysPerWeek == 3) {
+        cardsToAdd.push(buildCard(card, Day.Monday));
+        cardsToAdd.push(buildCard(card, Day.Wednesday));
+        cardsToAdd.push(buildCard(card, Day.Friday));
       }
+      else if (card.daysPerWeek == 2) {
+        cardsToAdd.push(buildCard(card, Day.Tuesday));
+        cardsToAdd.push(buildCard(card, Day.Thursday));
+      }
+      else {
+        for (var i = 0; i < card.daysPerWeek; i++) {
+          cardsToAdd.push(buildCard(card, weekDays[i]));
+        }
+      }
+
       return acc.concat(cardsToAdd);
     }, []);
   }
+}
+
+function buildCard(template: Card, day: Day): Card {
+  return {
+    activityType: template.activityType,
+    formLevel: template.formLevel,
+    title: template.title,
+    daysPerWeek: template.daysPerWeek,
+    duration: template.duration,
+    teacherInvolvement: template.teacherInvolvement,
+    day: day
+  };
 }

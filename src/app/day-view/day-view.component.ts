@@ -18,7 +18,7 @@ export class DayViewComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.selectedForm = Form.I;
+    this.selectedForm = this.forms[0];
   }
 
   formName(form: Form) {
@@ -29,7 +29,7 @@ export class DayViewComponent implements OnInit {
     this.selectedForm = selection;
   }
 
-  formFilter() {
+  selectedFormFilter() {
     return this.cards.filter(card => card.formLevel == this.selectedForm);
   }
 }

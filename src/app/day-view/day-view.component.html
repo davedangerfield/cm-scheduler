@@ -12,7 +12,7 @@
 
     <div *ngFor="let day of ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday']">
       <div class="day-header">{{day}}</div>
-      <app-card-list [cards]="formFilter(cards)"></app-card-list>
+      <app-card-list [cards]="selectedFormFilter(cards)"></app-card-list>
     </div>
 
   </div>

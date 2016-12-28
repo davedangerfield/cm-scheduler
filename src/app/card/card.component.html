@@ -2,7 +2,7 @@
 <div [style.height.px] = "height()" [style.background-color] = "backgroundColor()">
   {{activityTypeSymbol()}} {{cardData.title}}
   <br/>
-   Form {{cardData.formLevel}}: {{cardData.daysPerWeek}}x per week, {{cardData.duration}} minutes
+   Form {{formName(cardData.formLevel)}}: {{cardData.daysPerWeek}}x/week, {{cardData.duration}} mins
 </div>
 <!--
 function createCard(item) {

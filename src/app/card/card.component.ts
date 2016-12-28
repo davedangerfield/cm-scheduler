@@ -35,4 +35,8 @@ export class CardComponent {
     };
     return activityTypeSymbolMap[this.cardData.activityType];
   }
+
+  formName(form: Form) {
+    return Form[form];
+  }
 }

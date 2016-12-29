@@ -1,478 +1,434 @@
-export var formI = [{
-    "symbol": "-",
-    "text": "Bible",
-    "reps": 5,
+export var formICustom = [
+  {
+    symbol: "-",
+    title: "Practice Instrument",
+    daysPerWeek: 5,
+    duration: 15,
+    teacherInvolvement: 3,
+  }
+];
 
-    "time": 15,
-    "parentInvolvement": 3,
-    "bg": "#05fc70"
-}, {
-    "symbol": "@",
-    "text": "Copywork",
-    "reps": 5,
+export var formI = [
+  {
+    symbol: "-",
+    title: "Bible",
+    daysPerWeek: 5,
+    duration: 15,
+    teacherInvolvement: 3,
+  },
+  {
+    symbol: "@",
+    title: "Copywork",
+    daysPerWeek: 5,
+    duration: 10,
+    teacherInvolvement: 2,
+  },
+  {
+    symbol: "",
+    title: "Recitation",
+    daysPerWeek: 3,
+    duration: 10,
+    teacherInvolvement: 3,
+  },
+  {
+    symbol: "",
+    title: "Geography",
+    daysPerWeek: 2,
+    duration: 15,
+    teacherInvolvement: 3,
+  },
+  {
+    symbol: "-",
+    title: "Natural History",
+    daysPerWeek: 3,
+    duration: 10,
+    teacherInvolvement: 3,
+  },
+  {
+    symbol: "",
+    title: "Geography",
+    daysPerWeek: 2,
+    duration: 15,
+    teacherInvolvement: 3,
+  },
+  {
+    symbol: "@",
+    title: "Drawing",
+    daysPerWeek: 2,
+    duration: 20,
+    teacherInvolvement: 2,
+  },
+  {
+    symbol: "-",
+    title: "Literature 'Tales'",
+    daysPerWeek: 2,
+    duration: 20,
+    teacherInvolvement: 3,
+  },
+  {
+    symbol: "-",
+    title: "American History",
+    daysPerWeek: 2,
+    duration: 20,
+    teacherInvolvement: 3,
+  },
+  {
+    symbol: "",
+    title: "Modern Language 1",
+    daysPerWeek: 3,
+    duration: 10,
+    teacherInvolvement: 3,
+  },
+  {
+    symbol: "@",
+    title: "Art Appreciation",
+    daysPerWeek: 1,
+    duration: 10,
+    teacherInvolvement: 3,
+  },
+  {
+    symbol: "",
+    title: "Singing",
+    daysPerWeek: 4,
+    duration: 10,
+    teacherInvolvement: 2,
+  },
+  {
+    symbol: "",
+    title: "Play/Drill/Phys. Ed.",
+    daysPerWeek: 5,
+    duration: 15,
+    teacherInvolvement: 1,
+  },
+  {
+    symbol: "",
+    title: "Math",
+    daysPerWeek: 5,
+    duration: 20,
+    teacherInvolvement: 2,
+  },
+  {
+    symbol: "",
+    title: "Handicraft/Work",
+    daysPerWeek: 5,
+    duration: 20,
+    teacherInvolvement: 2,
+  },
+  {
+    symbol: "@",
+    title: "Reading",
+    daysPerWeek: 5,
+    duration: 10,
+    teacherInvolvement: 3,
+  },
+  {
+    symbol: "",
+    title: "Music Appreciation",
+    daysPerWeek: 1,
+    duration: 10,
+    teacherInvolvement: 2,
+  }
+];
 
-    "time": 10,
-    "parentInvolvement": 2,
-    "bg": "#05fc70"
-}, {
-    "symbol": "",
-    "text": "Recitation",
-    "reps": 3,
-
-    "time": 10,
-    "parentInvolvement": 3,
-    "bg": "#05fc70"
-}, {
-    "symbol": "",
-    "text": "Geography",
-    "reps": 2,
-
-    "time": 15,
-    "parentInvolvement": 3,
-    "bg": "#05fc70"
-}, {
-    "symbol": "-",
-    "text": "Natural History",
-    "reps": 3,
-
-    "time": 10,
-    "parentInvolvement": 3,
-    "bg": "#05fc70"
-}, {
-    "symbol": "",
-    "text": "Geography",
-    "reps": 2,
-
-    "time": 15,
-    "parentInvolvement": 3,
-    "bg": "#05fc70"
-}, {
-    "symbol": "@",
-    "text": "Drawing",
-    "reps": 2,
-
-    "time": 20,
-    "parentInvolvement": 2,
-    "bg": "#05fc70"
-}, {
-    "symbol": "-",
-    "text": "Literature 'Tales'",
-    "reps": 2,
-
-    "time": 20,
-    "parentInvolvement": 3,
-    "bg": "#05fc70"
-}, {
-    "symbol": "-",
-    "text": "American History",
-    "reps": 2,
-
-    "time": 20,
-    "parentInvolvement": 3,
-    "bg": "#05fc70"
-}, {
-    "symbol": "",
-    "text": "Modern Language 1",
-    "reps": 3,
-
-    "time": 10,
-    "parentInvolvement": 3,
-    "bg": "#05fc70"
-}, {
-    "symbol": "@",
-    "text": "Art Appreciation",
-    "reps": 1,
-
-    "time": 10,
-    "parentInvolvement": 3,
-    "bg": "#05fc70"
-}, {
-    "symbol": "",
-    "text": "Singing",
-    "reps": 4,
-
-    "time": 10,
-    "parentInvolvement": 2,
-    "bg": "#05fc70"
-}, {
-    "symbol": "",
-    "text": "Play/Drill/Phys. Ed.",
-    "reps": 5,
-
-    "time": 15,
-    "parentInvolvement": 1,
-    "bg": "#05fc70"
-}, {
-    "symbol": "",
-    "text": "Math",
-    "reps": 5,
-
-    "time": 20,
-    "parentInvolvement": 2,
-    "bg": "#05fc70"
-}, {
-    "symbol": "",
-    "text": "Handicraft/Work",
-    "reps": 5,
-
-    "time": 20,
-    "parentInvolvement": 2,
-    "bg": "#05fc70"
-}, {
-    "symbol": "@",
-    "text": "Reading",
-    "reps": 5,
-
-    "time": 10,
-    "parentInvolvement": 3,
-    "bg": "#05fc70"
-}, {
-    "symbol": "",
-    "text": "Music Appreciation",
-    "reps": 1,
-
-    "time": 10,
-    "parentInvolvement": 2,
-    "bg": "#05fc70"
-}];
+export var formIIACustom = [];
 
 export var formIIA = [
 	{
-		"symbol": "",
-		"text": "Music Appreciation",
-		"reps": "1",
-		"time": "10",
-		"parent": "2",
-		"bg": "#5ed9ff"
+		symbol: "",
+		title: "Music Appreciation",
+		daysPerWeek: 1,
+		duration: 10,
+		teacherInvolvement: 2,
 	},
 	{
-		"symbol": "@",
-		"text": "Dictation",
-		"reps": "1",
-		"time": "10",
-		"parent": "2",
-		"bg": "#5ed9ff"
+		symbol: "@",
+		title: "Dictation",
+		daysPerWeek: 1,
+		duration: 10,
+		teacherInvolvement: 2,
 	},
 	{
-		"symbol": "",
-		"text": "Singing",
-		"reps": "3",
-		"time": "10",
-		"parent": "1",
-		"bg": "#5ed9ff"
+		symbol: "",
+		title: "Singing",
+		daysPerWeek: 3,
+		duration: 10,
+		teacherInvolvement: 1,
 	},
 	{
-		"symbol": "",
-		"text": "Recitation",
-		"reps": "5",
-		"time": "10",
-		"parent": "1",
-		"bg": "#5ed9ff"
+		symbol: "",
+		title: "Recitation",
+		daysPerWeek: 5,
+		duration: 10,
+		teacherInvolvement: 1,
 	},
 	{
-		"symbol": "+",
-		"text": "Latin",
-		"reps": "2",
-		"time": "30",
-		"parent": "2",
-		"bg": "#5ed9ff"
+		symbol: "+",
+		title: "Latin",
+		daysPerWeek: 2,
+		duration: 30,
+		teacherInvolvement: 2,
 	},
 	{
-		"symbol": "-",
-		"text": "British History",
-		"reps": "1",
-		"time": "20",
-		"parent": "1",
-		"bg": "#5ed9ff"
+		symbol: "-",
+		title: "British History",
+		daysPerWeek: 1,
+		duration: 20,
+		teacherInvolvement: 1,
 	},
 	{
-		"symbol": "-",
-		"text": "Bible",
-		"reps": "5",
-		"time": "15",
-		"parent": "3",
-		"bg": "#5ed9ff"
+		symbol: "-",
+		title: "Bible",
+		daysPerWeek: 5,
+		duration: 15,
+		teacherInvolvement: 3,
 	},
 	{
-		"symbol": "",
-		"text": "Play",
-		"reps": "5",
-		"time": "15",
-		"parent": "1",
-		"bg": "#5ed9ff"
+		symbol: "",
+		title: "Play",
+		daysPerWeek: 5,
+		duration: 15,
+		teacherInvolvement: 1,
 	},
 	{
-		"symbol": "-",
-		"text": "Natural History",
-		"reps": "1",
-		"time": "30",
-		"parent": "1",
-		"bg": "#5ed9ff"
+		symbol: "-",
+		title: "Natural History",
+		daysPerWeek: 1,
+		duration: 30,
+		teacherInvolvement: 1,
 	},
 	{
-		"symbol": "@",
-		"text": "Copywork",
-		"reps": "5",
-		"time": "10",
-		"parent": "1",
-		"bg": "#5ed9ff"
+		symbol: "@",
+		title: "Copywork",
+		daysPerWeek: 5,
+		duration: 10,
+		teacherInvolvement: 1,
 	},
 	{
-		"symbol": "+",
-		"text": "Grammar",
-		"reps": "2",
-		"time": "15",
-		"parent": "3",
-		"bg": "#5ed9ff"
+		symbol: "+",
+		title: "Grammar",
+		daysPerWeek: 2,
+		duration: 15,
+		teacherInvolvement: 3,
 	},
 	{
-		"symbol": "+",
-		"text": "Math",
-		"reps": "5",
-		"time": "30",
-		"parent": "2",
-		"bg": "#5ed9ff"
+		symbol: "+",
+		title: "Math",
+		daysPerWeek: 5,
+		duration: 30,
+		teacherInvolvement: 2,
 	},
 	{
-		"symbol": "",
-		"text": "Geography",
-		"reps": "2",
-		"time": "20",
-		"parent": "1",
-		"bg": "#5ed9ff"
+		symbol: "",
+		title: "Geography",
+		daysPerWeek: 2,
+		duration: 20,
+		teacherInvolvement: 1,
 	},
 	{
-		"symbol": "-",
-		"text": "Literature",
-		"reps": "1",
-		"time": "30",
-		"parent": "1",
-		"bg": "#5ed9ff"
+		symbol: "-",
+		title: "Literature",
+		daysPerWeek: 1,
+		duration: 30,
+		teacherInvolvement: 1,
 	},
 	{
-		"symbol": "-",
-		"text": "Citizenship",
-		"reps": "1",
-		"time": "30",
-		"parent": "3",
-		"bg": "#5ed9ff"
+		symbol: "-",
+		title: "Citizenship",
+		daysPerWeek: 1,
+		duration: 30,
+		teacherInvolvement: 3,
 	},
 	{
-		"symbol": "@",
-		"text": "Dictation",
-		"reps": "2",
-		"time": "20",
-		"parent": "2",
-		"bg": "#5ed9ff"
+		symbol: "@",
+		title: "Dictation",
+		daysPerWeek: 2,
+		duration: 20,
+		teacherInvolvement: 2,
 	},
 	{
-		"symbol": "",
-		"text": "Modern Language 1",
-		"reps": "3",
-		"time": "20",
-		"parent": "3",
-		"bg": "#5ed9ff"
+		symbol: "",
+		title: "Modern Language 1",
+		daysPerWeek: 3,
+		duration: 20,
+		teacherInvolvement: 3,
 	},
 	{
-		"symbol": "-",
-		"text": "Ancient History",
-		"reps": "1",
-		"time": "30",
-		"parent": "1",
-		"bg": "#5ed9ff"
+		symbol: "-",
+		title: "Ancient History",
+		daysPerWeek: 1,
+		duration: 30,
+		teacherInvolvement: 1,
 	},
 	{
-		"symbol": "-",
-		"text": "Natural History",
-		"reps": "2",
-		"time": "20",
-		"parent": "1",
-		"bg": "#5ed9ff"
+		symbol: "-",
+		title: "Natural History",
+		daysPerWeek: 2,
+		duration: 20,
+		teacherInvolvement: 1,
 	},
 	{
-		"symbol": "-",
-		"text": "American History",
-		"reps": "1",
-		"time": "30",
-		"parent": "1",
-		"bg": "#5ed9ff"
+		symbol: "-",
+		title: "American History",
+		daysPerWeek: 1,
+		duration: 30,
+		teacherInvolvement: 1,
 	}
 ];
 
+export var formIIICustom = [];
+
 export var formIII = [{
-    "symbol": "-",
-    "text": "Bible",
-    "reps": 5,
-    "time": 15,
-    "parentInvolvement": 1,
-    "bg": "#fcd305",
-
-}, {
-    "symbol": "",
-    "text": "Singing",
-    "reps": 3,
-    "time": 10,
-    "parentInvolvement": 1,
-    "bg": "#fcd305",
-
-}, {
-    "symbol": "",
-    "text": "Recitation",
-    "reps": 5,
-    "time": 10,
-    "parentInvolvement": 1,
-    "bg": "#fcd305",
-
-}, {
-    "symbol": "",
-    "text": "Music Appreciation",
-    "reps": 1,
-    "time": 10,
-    "parentInvolvement": 2,
-    "bg": "#fcd305",
-
-}, {
-    "symbol": "@",
-    "text": "Art Appreciation",
-    "reps": 1,
-    "time": 10,
-    "parentInvolvement": 3,
-    "bg": "#fcd305",
-
-}, {
-    "symbol": "-",
-    "text": "British History",
-    "reps": 1,
-    "time": 30,
-    "parentInvolvement": 1,
-    "bg": "#fcd305",
-
-}, {
-    "symbol": "+",
-    "text": "Latin",
-    "reps": 2,
-    "time": 30,
-    "parentInvolvement": 1,
-    "bg": "#fcd305",
-
-}, {
-    "symbol": "",
-    "text": "Composition",
-    "reps": 1,
-    "time": 30,
-    "parentInvolvement": 1,
-    "bg": "#fcd305",
-
-}, {
-    "symbol": "@",
-    "text": "Copywork",
-    "reps": 1,
-    "time": 10,
-    "parentInvolvement": 1,
-    "bg": "#fcd305",
-
-}, {
-    "symbol": "",
-    "text": "Play",
-    "reps": 5,
-    "time": 15,
-    "parentInvolvement": 1,
-    "bg": "#fcd305",
-
-}, {
-    "symbol": "+",
-    "text": "Math",
-    "reps": 5,
-    "time": 30,
-    "parentInvolvement": 2,
-    "bg": "#fcd305",
-
-}, {
-    "symbol": "",
-    "text": "Modern Language",
-    "reps": 3,
-    "time": 30,
-    "parentInvolvement": 2,
-    "bg": "#fcd305",
-
-}, {
-    "symbol": "-",
-    "text": "American History",
-    "reps": 1,
-    "time": 30,
-    "parentInvolvement": 1,
-    "bg": "#fcd305",
-
-}, {
-    "symbol": "-",
-    "text": "Ancient History",
-    "reps": 1,
-    "time": 30,
-    "parentInvolvement": 1,
-    "bg": "#fcd305",
-
-}, {
-    "symbol": "",
-    "text": "Geography",
-    "reps": 1,
-    "time": 30,
-    "parentInvolvement": 1,
-    "bg": "#fcd305",
-
-}, {
-    "symbol": "-",
-    "text": "Natural History",
-    "reps": 3,
-    "time": 40,
-    "parentInvolvement": 1,
-    "bg": "#fcd305",
-
-}, {
-    "symbol": "-",
-    "text": "Citizenship",
-    "reps": 1,
-    "time": 30,
-    "parentInvolvement": 3,
-    "bg": "#fcd305",
-
-}, {
-    "symbol": "",
-    "text": "Geography",
-    "reps": 1,
-    "time": 20,
-    "parentInvolvement": 1,
-    "bg": "#fcd305",
-
-}, {
-    "symbol": "+",
-    "text": "Grammar",
-    "reps": 2,
-    "time": 30,
-    "parentInvolvement": 3,
-    "bg": "#fcd305",
-
-}, {
-    "symbol": "@",
-    "text": "Dictation",
-    "reps": 2,
-    "time": 20,
-    "parentInvolvement": 2,
-    "bg": "#fcd305",
-
-}, {
-    "symbol": "-",
-    "text": "Natural History",
-    "reps": 1,
-    "time": 45,
-    "parentInvolvement": 1,
-    "bg": "#fcd305",
-
-}, {
-    "symbol": "-",
-    "text": "Literature",
-    "reps": 1,
-    "time": 30,
-    "parentInvolvement": 1,
-    "bg": "#fcd305",
-
-}];
+    symbol: "-",
+    title: "Bible",
+    daysPerWeek: 5,
+    duration: 15,
+    teacherInvolvement: 1,
+  },
+  {
+    symbol: "",
+    title: "Singing",
+    daysPerWeek: 3,
+    duration: 10,
+    teacherInvolvement: 1,
+  },
+  {
+    symbol: "",
+    title: "Recitation",
+    daysPerWeek: 5,
+    duration: 10,
+    teacherInvolvement: 1,
+  },
+  {
+    symbol: "",
+    title: "Music Appreciation",
+    daysPerWeek: 1,
+    duration: 10,
+    teacherInvolvement: 2,
+  },
+  {
+    symbol: "@",
+    title: "Art Appreciation",
+    daysPerWeek: 1,
+    duration: 10,
+    teacherInvolvement: 3,
+  },
+  {
+    symbol: "-",
+    title: "British History",
+    daysPerWeek: 1,
+    duration: 30,
+    teacherInvolvement: 1,
+  },
+  {
+    symbol: "+",
+    title: "Latin",
+    daysPerWeek: 2,
+    duration: 30,
+    teacherInvolvement: 1,
+  },
+  {
+    symbol: "",
+    title: "Composition",
+    daysPerWeek: 1,
+    duration: 30,
+    teacherInvolvement: 1,
+  },
+  {
+    symbol: "@",
+    title: "Copywork",
+    daysPerWeek: 1,
+    duration: 10,
+    teacherInvolvement: 1,
+  },
+  {
+    symbol: "",
+    title: "Play",
+    daysPerWeek: 5,
+    duration: 15,
+    teacherInvolvement: 1,
+  },
+  {
+    symbol: "+",
+    title: "Math",
+    daysPerWeek: 5,
+    duration: 30,
+    teacherInvolvement: 2,
+  },
+  {
+    symbol: "",
+    title: "Modern Language",
+    daysPerWeek: 3,
+    duration: 30,
+    teacherInvolvement: 2,
+  },
+  {
+    symbol: "-",
+    title: "American History",
+    daysPerWeek: 1,
+    duration: 30,
+    teacherInvolvement: 1,
+  },
+  {
+    symbol: "-",
+    title: "Ancient History",
+    daysPerWeek: 1,
+    duration: 30,
+    teacherInvolvement: 1,
+  },
+  {
+    symbol: "",
+    title: "Geography",
+    daysPerWeek: 1,
+    duration: 30,
+    teacherInvolvement: 1,
+  },
+  {
+    symbol: "-",
+    title: "Natural History",
+    daysPerWeek: 3,
+    duration: 40,
+    teacherInvolvement: 1,
+  },
+  {
+    symbol: "-",
+    title: "Citizenship",
+    daysPerWeek: 1,
+    duration: 30,
+    teacherInvolvement: 3,
+  },
+  {
+    symbol: "",
+    title: "Geography",
+    daysPerWeek: 1,
+    duration: 20,
+    teacherInvolvement: 1,
+  },
+  {
+    symbol: "+",
+    title: "Grammar",
+    daysPerWeek: 2,
+    duration: 30,
+    teacherInvolvement: 3,
+  },
+  {
+    symbol: "@",
+    title: "Dictation",
+    daysPerWeek: 2,
+    duration: 20,
+    teacherInvolvement: 2,
+  },
+  {
+    symbol: "-",
+    title: "Natural History",
+    daysPerWeek: 1,
+    duration: 45,
+    teacherInvolvement: 1,
+  },
+  {
+    symbol: "-",
+    title: "Literature",
+    daysPerWeek: 1,
+    duration: 30,
+    teacherInvolvement: 1,
+  }
+];

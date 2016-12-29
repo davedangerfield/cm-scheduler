@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 
 import { Card } from './model';
 import { ActivityType, activityTypeFromSymbol, Day, weekDays, Form, Involvement } from './enums';
-import { formI, formIIA, formIII } from './data';
+import { formI, formICustom, formIIA, formIIACustom, formIII, formIIICustom } from './data';
 
 @Injectable()
 export class FormDataService {
@@ -14,19 +14,19 @@ export class FormDataService {
   }
   
   init() {
-    // Fix formIIA first because it has a 'parent' instead of a 'parentInvolvement'
-    formIIA.forEach((item: any) => {
-      item.parentInvolvement = item.parent; 
-      delete item.parent;
-    });
 
-    var originalData = {formI, formIIA, formIII};
+    var original = {formI, formICustom, formIIA, formIIACustom, formIII, formIIICustom};
     
-    var formICards = originalData.formI.map(toCard(Form.I));
-    var formIIACards = originalData.formIIA.map(toCard(Form.IIA));
-    var formIIICards = originalData.formIII.map(toCard(Form.III));
+    var formICards = original.formI.map(toCard(Form.I))
+    var formICustomCards = original.formICustom.map(toCard(Form.I));
     
-    var initialCards = [].concat(formICards, formIIACards, formIIICards);
+    var formIIACards = original.formIIA.map(toCard(Form.IIA));
+    var formIIACustomCards = original.formIIACustom.map(toCard(Form.IIA));
+    
+    var formIIICards = original.formIII.map(toCard(Form.III));
+    var formIIICustomCards = original.formIIICustom.map(toCard(Form.III));
+    
+    var initialCards = [].concat(formICards, formICustomCards, formIIACards, formIIACustomCards, formIIICards, formIIICustomCards);
 
     var numberOfSingleDayCoursesAssigned = 0;
     this.cards = initialCards.reduce((accumulatedCards, card: Card) => {
@@ -62,10 +62,10 @@ function toCard (form: Form) {
     return <Card>{
       activityType: activityTypeFromSymbol(item.symbol),
       formLevel: form,
-      title: item.text,
-      daysPerWeek: Number(item.reps),
-      duration: Number(item.time),
-      teacherInvolvement: Number(item.parentInvolvement) - 1,
+      title: item.title,
+      daysPerWeek: Number(item.daysPerWeek),
+      duration: Number(item.duration),
+      teacherInvolvement: Number(item.teacherInvolvement) - 1,
     };
   }
 }

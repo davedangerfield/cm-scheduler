@@ -28,6 +28,7 @@ export class FormDataService {
     
     var initialCards = [].concat(formICards, formIIACards, formIIICards);
 
+    var numberOfSingleDayCoursesAssigned = 0;
     this.cards = initialCards.reduce((accumulatedCards, card: Card) => {
       var cardsToAdd: Card[] = [];
       
@@ -39,6 +40,11 @@ export class FormDataService {
       else if (card.daysPerWeek == 2) {
         cardsToAdd.push(buildCard(card, Day.Tuesday));
         cardsToAdd.push(buildCard(card, Day.Thursday));
+      }
+      else if (card.daysPerWeek == 1) {
+        // Assign single day classes in round robin strategy
+        cardsToAdd.push(buildCard(card, weekDays[numberOfSingleDayCoursesAssigned % 5]));
+        numberOfSingleDayCoursesAssigned++;
       }
       else {
         for (var i = 0; i < card.daysPerWeek; i++) {

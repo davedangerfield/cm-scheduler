@@ -1,23 +1,6 @@
-<!--<pre>{{cardData | json}}</pre>-->
 <div [style.height.px] = "height()" [style.background-color] = "backgroundColor()">
   {{activityTypeSymbol()}} {{cardData.title}}
   <br/>
    Form {{formName(cardData.formLevel)}}: {{cardData.daysPerWeek}}x/week, {{cardData.duration}} mins
+   <div class = "circ {{teacherInvolvement(cardData.teacherInvolvement)}}"></div>
 </div>
-<!--
-function createCard(item) {
-    var li = document.createElement("li");
-    li.appendChild(document.createTextNode(item.symbol + "   " + item.text + ", " + item.time + " min " + item.reps + " times/week"));
-    li.className = "list-group-item ";
-    li.style.height = ((item.time / 60) * 300).toString() + "px";
-    li.style.backgroundColor = item.bg;
-    li.setAttribute("data-id", item.text + item.reps + item.i);
-
-    var circ = document.createElement("div");
-    var percent = getPercent(item.parentInvolvement);
-    circ.style.background = `linear-gradient(black ${percent}%, rgba(255, 255, 255, 0) ${percent}%)`;
-    circ.className = "circ";
-    li.appendChild(circ);
-    item.i++;
-    return li;
-}-->

@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 
-import { ActivityType, Form } from '../shared/enums';
+import { ActivityType, Form, Involvement } from '../shared/enums';
 import { Card } from '../shared/model';
 
 @Component({
@@ -38,5 +38,16 @@ export class CardComponent {
 
   formName(form: Form) {
     return Form[form];
+  }
+
+  teacherInvolvement() {
+    // console.log(Involvement[this.cardData.teacherInvolvement]);
+    // return Involvement[this.cardData.teacherInvolvement].toLowerCase();
+    var teacherInvolvementMap = {
+      [3]:'full', 
+      [2]:'half',
+      [1]:'crescent',
+    };
+    return teacherInvolvementMap[this.cardData.teacherInvolvement];
   }
 }

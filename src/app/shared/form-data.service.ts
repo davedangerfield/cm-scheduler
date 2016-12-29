@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 
 import { Card } from './model';
 import { ActivityType, activityTypeFromSymbol, Day, weekDays, Form, Involvement } from './enums';
-import { formI, formICustom, formIIA, formIIACustom, formIII, formIIICustom } from './data';
+import { formI, formIIA, formIII } from './data';
 
 @Injectable()
 export class FormDataService {
@@ -15,18 +15,13 @@ export class FormDataService {
   
   init() {
 
-    var original = {formI, formICustom, formIIA, formIIACustom, formIII, formIIICustom};
+    var original = {formI, formIIA, formIII};
     
     var formICards = original.formI.map(toCard(Form.I))
-    var formICustomCards = original.formICustom.map(toCard(Form.I));
-    
     var formIIACards = original.formIIA.map(toCard(Form.IIA));
-    var formIIACustomCards = original.formIIACustom.map(toCard(Form.IIA));
-    
     var formIIICards = original.formIII.map(toCard(Form.III));
-    var formIIICustomCards = original.formIIICustom.map(toCard(Form.III));
     
-    var initialCards = [].concat(formICards, formICustomCards, formIIACards, formIIACustomCards, formIIICards, formIIICustomCards);
+    var initialCards = [].concat(formICards, formIIACards, formIIICards);
 
     var numberOfSingleDayCoursesAssigned = 0;
     this.cards = initialCards.reduce((accumulatedCards, card: Card) => {

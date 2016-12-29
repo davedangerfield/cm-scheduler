@@ -37,18 +37,11 @@ export class CardComponent {
   }
 
   formName(form: Form) {
-    // return Form[form];
     return Form[this.cardData.formLevel];
   }
 
   teacherInvolvement() {
-    // TODO console.log(Involvement[this.cardData.teacherInvolvement]);
-    // return Involvement[this.cardData.teacherInvolvement].toLowerCase();
-    var teacherInvolvementMap = {
-      [3]:'full', 
-      [2]:'half',
-      [1]:'crescent',
-    };
-    return teacherInvolvementMap[this.cardData.teacherInvolvement];
+    return Involvement[this.cardData.teacherInvolvement].toLowerCase();
   }
+  
 }

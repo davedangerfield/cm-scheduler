@@ -1,5 +1,5 @@
 export enum Involvement {
-	'CRESCENT',
-	'HALF',
-	'FULL',
+	'CRESCENT' = 1,
+	'HALF' = 2,
+	'FULL' = 3,
 }

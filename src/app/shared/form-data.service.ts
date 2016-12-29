@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 
 import { Card } from './model';
 import { ActivityType, activityTypeFromSymbol, Day, weekDays, Form, Involvement } from './enums';
-import { formI, formIIA, formIII } from './data';
+import { formI, formIIA, formIII } from './initial-data';
 
 @Injectable()
 export class FormDataService {

@@ -5,6 +5,7 @@ import 'rxjs/add/operator/switchMap';
 import { Card } from '../shared/model';
 import { Day, weekDays, Form, allForms } from '../shared/enums';
 import { FormDataService } from '../shared/form-data.service';
+import { ConflictsService } from '../shared/conflicts.service';
 
 @Component({
   selector: 'app-day-view',
@@ -17,9 +18,11 @@ export class DayViewComponent implements OnInit {
   private selectedForm: Form;
   private forms: Form[] = allForms;
   private days: Day[] = weekDays;
+  private conflicts: string = '';
 
   constructor(
     private formDataService: FormDataService,
+    private conflictsService: ConflictsService,
     private route: ActivatedRoute,
     private router: Router,
   ) { }
@@ -52,5 +55,9 @@ export class DayViewComponent implements OnInit {
 
   changeToFormView(ev) {
     // console.log(ev.target.textContent);
+  }
+  
+  showConflicts() {
+    this.conflicts = this.conflictsService.compute(this.cards);
   }
 }

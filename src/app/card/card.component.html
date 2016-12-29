@@ -1,6 +1,5 @@
 <div [style.height.px] = "height()" [style.background-color] = "backgroundColor()">
-  {{activityTypeSymbol()}} {{cardData.title}}
-  <br/>
-   Form {{formName()}}: {{cardData.daysPerWeek}}x/week, {{cardData.duration}} mins
-   <div class = "circ {{teacherInvolvement(cardData.teacherInvolvement)}}"></div>
+{{activityTypeSymbol()}} {{cardData.title}}<br/>
+{{formName()}}/{{cardData.daysPerWeek}}x/{{cardData.duration}}m
+  <div class = "circ {{teacherInvolvement(cardData.teacherInvolvement)}}"></div>
 </div>

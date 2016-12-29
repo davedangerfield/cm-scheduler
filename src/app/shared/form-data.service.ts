@@ -12,38 +12,23 @@ export class FormDataService {
   constructor() { 
     this.init();
   }
-
+  
   init() {
-    var formICards = formI.map(item => (<Card> {
-      activityType: activityTypeFromSymbol(item.symbol),
-      formLevel: Form.I,
-      title: item.text,
-      daysPerWeek: item.reps,
-      duration: item.time,
-      teacherInvolvement: item.parentInvolvement,
-    }));
+    // Fix formIIA first because it has a 'parent' instead of a 'parentInvolvement'
+    formIIA.forEach((item: any) => {
+      item.parentInvolvement = item.parent; 
+      delete item.parent;
+    });
+
+    var originalData = {formI, formIIA, formIII};
     
-    var formIIACards = formIIA.map(item => (<Card> {
-      activityType: activityTypeFromSymbol(item.symbol),
-      formLevel: Form.IIA,
-      title: item.text,
-      daysPerWeek: Number(item.reps),
-      duration: Number(item.time),
-      teacherInvolvement: Number(item.parent),
-    }));
-    
-    var formIIICards = formIII.map(item => (<Card> {
-      activityType: activityTypeFromSymbol(item.symbol),
-      formLevel: Form.III,
-      title: item.text,
-      daysPerWeek: item.reps,
-      duration: item.time,
-      teacherInvolvement: item.parentInvolvement,
-    }));
+    var formICards = originalData.formI.map(toCard(Form.I));
+    var formIIACards = originalData.formIIA.map(toCard(Form.IIA));
+    var formIIICards = originalData.formIII.map(toCard(Form.III));
     
     var initialCards = [].concat(formICards, formIIACards, formIIICards);
 
-    this.cards = initialCards.reduce((acc, card: Card) => {
+    this.cards = initialCards.reduce((accumulatedCards, card: Card) => {
       var cardsToAdd: Card[] = [];
       
       if (card.daysPerWeek == 3) {
@@ -61,8 +46,21 @@ export class FormDataService {
         }
       }
 
-      return acc.concat(cardsToAdd);
+      return accumulatedCards.concat(cardsToAdd);
     }, []);
+  }
+}
+
+function toCard (form: Form) {
+  return function (item): Card {
+    return <Card>{
+      activityType: activityTypeFromSymbol(item.symbol),
+      formLevel: form,
+      title: item.text,
+      daysPerWeek: Number(item.reps),
+      duration: Number(item.time),
+      teacherInvolvement: Number(item.parentInvolvement) - 1,
+    };
   }
 }
 
@@ -74,6 +72,6 @@ function buildCard(template: Card, day: Day): Card {
     daysPerWeek: template.daysPerWeek,
     duration: template.duration,
     teacherInvolvement: template.teacherInvolvement,
-    day: day
+    day,
   };
 }

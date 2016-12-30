@@ -5,7 +5,7 @@
       <option *ngFor="let day of days" [value]="day">{{dayName(day)}}</option>
     </select>
 
-    <app-time-list></app-time-list>
+    <app-time-list [cards]="cards"></app-time-list>
   </div>
   
   <div class="forms">

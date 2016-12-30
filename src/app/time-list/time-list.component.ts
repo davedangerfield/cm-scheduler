@@ -1,13 +1,23 @@
-import { Component } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+
+import { Card } from '../shared/model';
+import { Day } from '../shared/enums';
+import { ConflictsService } from '../shared/conflicts.service';
 
 @Component({
   selector: 'app-time-list',
   templateUrl: './time-list.component.html',
   styleUrls: ['./time-list.component.scss']
 })
-export class TimeListComponent {
+export class TimeListComponent implements OnInit {
 
-  times: string[] = [
+@Input() cards: Card[];
+
+constructor(
+    private conflictsService: ConflictsService,
+  ) { }
+
+times: string[] = [
     '0:00',
     '0:10',
     '0:20',
@@ -34,5 +44,25 @@ export class TimeListComponent {
     '3:50',
     '4:00',
   ];
+
+  timeData: Object[];
+
+  ngOnInit () {
+    this.timeData = this.times.map((time, i) => {
+      
+      var windowMin = i * 10;
+      var windowMax = (i * 10) + 9;
+      var involvement = 
+        !this.cards ? 
+          undefined : 
+          this.conflictsService.computeInvolvement(Day.Monday, windowMin, windowMax, this.cards);
+      return {
+        time,
+        windowMin,
+        windowMax,
+        involvement,
+      };
+    });
+  }
 
 }

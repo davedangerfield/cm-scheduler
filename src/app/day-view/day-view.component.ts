@@ -18,7 +18,9 @@ export class DayViewComponent implements OnInit {
   private selectedForm: Form;
   private forms: Form[] = allForms;
   private days: Day[] = weekDays;
-  private conflicts: string = '';
+  private conflicts: string[];
+  // private min;
+  // private max;
 
   constructor(
     private formDataService: FormDataService,
@@ -60,4 +62,16 @@ export class DayViewComponent implements OnInit {
   showConflicts() {
     this.conflicts = this.conflictsService.compute(this.cards);
   }
+
+  // onChangeMin(min) {
+  //   this.min = min;
+  //   this.conflicts = this.conflictsService.showInvolvementConflicts(Day.Monday, min, this.max, this.cards);
+  // }
+  
+  // onChangeMax(max) {
+  //   this.max = max;
+  //   this.conflicts = this.conflictsService.showInvolvementConflicts(Day.Monday, this.min, max, this.cards);
+
+  // }
+
 }

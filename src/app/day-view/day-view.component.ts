@@ -37,6 +37,7 @@ export class DayViewComponent implements OnInit {
       // .switchMap((params: Params) => this.service.getHero(+params['id']))
       // .subscribe((hero: Hero) => this.hero = hero);
     this.cards = this.formDataService.newCards;
+    this.showConflicts();
   }
 
   cardDropped(ev) {
@@ -44,6 +45,7 @@ export class DayViewComponent implements OnInit {
     if (ev.day == weekDays[1]) {
       // console.log('DayView: cardDropped, save schedule');
       this.formDataService.saveCards();
+      this.showConflicts();
     }
   }
 

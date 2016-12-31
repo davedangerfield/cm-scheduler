@@ -1,16 +1,35 @@
 import { Injectable } from '@angular/core';
 
 import { Card } from './model';
-import { Day, weekDays, Form } from './enums';
+import { ActivityType, Day, weekDays, Form, allForms } from './enums';
+import { FormDataService } from './form-data.service';
 
 @Injectable()
 export class ConflictsService {
 
-  constructor() { }
+  constructor(private formDataService: FormDataService) { }
 
-  compute(cards: Card[]): string[] {
+  computeActivityTypeConflicts(): string[] {
 
     var conflicts = [];
+    var cards = this.formDataService.newCards;
+
+    // Compute activity type conflicts per day for contiguous activities
+    allForms.forEach(form => {
+      var formName = Form[form];
+      weekDays.forEach(day => {
+        var dayName = Day[day];
+
+        this.formDataService.newCards[formName][dayName].forEach((card, index, array) => {
+          if (index == 0) return;
+          var priorCard = array[index-1];
+          if (card.activityType != ActivityType.BLANK && 
+              card.activityType == priorCard.activityType) {
+            conflicts.push(`${formName}-${dayName}: ${priorCard.title} and ${card.title} are of the same activity type`);
+          }
+        });
+      });
+    });
     
     // var monday = cards.filter(card => card.day == Day.Monday);
 
@@ -52,20 +71,7 @@ export class ConflictsService {
 
     // console.log(newFormI);
 
-    // Compute activity type conflicts per day for contiguous activities
-    // weekDays.forEach(weekDay => {
-    //   conflicts.push(`${Day[weekDay]}`);
-
-    //   var dayCards = cards.filter(card => card.day == weekDay);
-    //   dayCards.forEach((card, index) => {
-
-    //     if (index == 0) return;
-    //     var priorCard = dayCards[index-1];
-    //     if (card.activityType == priorCard.activityType) {
-    //       conflicts.push(`${priorCard.title} and ${card.title} are of the same activity type`);
-    //     }
-    //   });
-    // });
+    
 
     return conflicts;
 

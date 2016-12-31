@@ -26,7 +26,7 @@ export class FormDataService {
         this.newCards[formName][dayName].forEach(card => card.day = day);
       })
     })
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(this.newCards));
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(this.newCards, null, 2));
   }
 
   init() { 

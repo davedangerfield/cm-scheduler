@@ -12,11 +12,11 @@ export class ConflictsService {
 
     var conflicts = [];
     
-    var monday = cards.filter(card => card.day == Day.Monday);
+    // var monday = cards.filter(card => card.day == Day.Monday);
 
-    var formI = monday.filter(card => card.formLevel == Form.I);
-    var formIIA = monday.filter(card => card.formLevel == Form.IIA);
-    var formIII = monday.filter(card => card.formLevel == Form.III);
+    // var formI = monday.filter(card => card.formLevel == Form.I);
+    // var formIIA = monday.filter(card => card.formLevel == Form.IIA);
+    // var formIII = monday.filter(card => card.formLevel == Form.III);
 
     //Monday
     // var monday = cards.filter(card => card.day == Day.Monday);
@@ -91,15 +91,13 @@ export class ConflictsService {
 }
 
 function getIntersectingCourses(day: Day, windowMin, windowMax, cards: Card[]): Card[] {
-      var dayCards = cards.filter(card => card.day == day);
 
-      var formICourses = dayCards
-        .filter(card => card.formLevel == Form.I)
+      var formICourses = cards[Form[Form.I]][Day[day]] || cards[Form[Form.I]] 
         .reduce(toIntersectingCourses(windowMin, windowMax), []);
-      var formIIACourses = dayCards
+      var formIIACourses = cards[Form[Form.IIA]][Day[day]] || cards[Form[Form.I]]
         .filter(card => card.formLevel == Form.IIA)
         .reduce(toIntersectingCourses(windowMin, windowMax), []);
-      var formIIICourses = dayCards
+      var formIIICourses = cards[Form[Form.III]][Day[day]] || cards[Form[Form.I]]
         .filter(card => card.formLevel == Form.III)
         .reduce(toIntersectingCourses(windowMin, windowMax), []);
       

@@ -13,7 +13,7 @@ import { FormDataService } from '../shared/form-data.service';
 })
 export class FormViewComponent implements OnInit {
 
-  private cards: Card[];
+  private cards: {};
   private selectedDay: Day;
   private forms: Form[] = allForms;
   private days: Day[] = weekDays;
@@ -27,7 +27,7 @@ export class FormViewComponent implements OnInit {
   ngOnInit() {
     var dayId = Number(this.route.snapshot.params['dayId']);
     this.selectedDay = dayId > -1 ? this.days[dayId] : this.days[0];
-    this.cards = this.formDataService.cards;
+    this.cards = this.formDataService.newCards;
   }
   
   dayName(day: Day) {
@@ -40,10 +40,6 @@ export class FormViewComponent implements OnInit {
 
   onChangeDay(selection) {
     this.selectedDay = selection;
-  }
-
-  selectedDayFilter(form: Form) {
-    return this.cards.filter(card => (card.day == this.selectedDay) && (card.formLevel == form));
   }
 
   changeToDayView(ev) {

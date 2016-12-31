@@ -1,0 +1,35 @@
+.card {
+	border: 1px solid #999999;
+	padding: 1%;
+  text-align: center;
+}
+
+.circ{
+    transform: rotate(-90deg);
+    border-radius: 100%;
+    height: 15px;
+    width: 15px;
+    float: right;
+    border: 1px solid black;
+    margin-right: 15px;
+}
+
+.crescent {
+	background: linear-gradient(black 75%, rgba(255, 255, 255, 0) 75%);
+}
+
+.half {
+	background: linear-gradient(black 50%, rgba(255, 255, 255, 0) 50%);
+}
+
+.full {
+	background: linear-gradient(black 0%, rgba(255, 255, 255, 0) 0%);
+}
+
+.ex-moved {
+  background-color: lightgreen;
+}
+
+.ex-over {
+  background-color: lightyellow;
+}

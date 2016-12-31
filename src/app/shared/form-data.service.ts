@@ -1,13 +1,14 @@
 import { Injectable } from '@angular/core';
 
 import { Card } from './model';
-import { ActivityType, activityTypeFromSymbol, Day, weekDays, Form, Involvement } from './enums';
+import { ActivityType, activityTypeFromSymbol, Day, weekDays, Form, allForms, Involvement } from './enums';
 import { formI, formIIA, formIII } from './initial-data';
 
 @Injectable()
 export class FormDataService {
 
-  public cards: Card[] = [];
+  private cards: Card[] = [];
+  public newCards: {};
 
   constructor() { 
     this.init();
@@ -49,7 +50,23 @@ export class FormDataService {
 
       return accumulatedCards.concat(cardsToAdd);
     }, []);
+
+    this.newCards = newFormat(this.cards);
   }
+}
+
+function newFormat(cards: Card[]) {
+  var newCards = {};
+
+  allForms.forEach(form => {
+    newCards[Form[form]] = {};
+    weekDays.forEach(weekDay => {
+      newCards[Form[form]][Day[weekDay]] = cards.filter(card => card.formLevel == form && card.day == weekDay);
+    });
+  });
+  
+  return newCards;
+
 }
 
 function toCard (form: Form) {

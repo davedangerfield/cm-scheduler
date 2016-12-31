@@ -12,7 +12,7 @@
 
     <div *ngFor="let day of days; let i = index;" class="column">
       <div class="day-header" [routerLink]="['/form', { dayId: i }]" (click)="changeToFormView($event)">{{dayName(day)}}</div>
-      <app-card-list [cards]="selectedFormFilter(day)"></app-card-list>
+      <app-card-list [cards]="cards[formName(selectedForm)][dayName(day)]" [bag]="formName(selectedForm)"></app-card-list>
     </div>
 
   </div>

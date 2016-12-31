@@ -14,7 +14,7 @@ import { ConflictsService } from '../shared/conflicts.service';
 })
 export class DayViewComponent implements OnInit {
 
-  private cards: Card[];
+  private cards: {};
   private selectedForm: Form;
   private forms: Form[] = allForms;
   private days: Day[] = weekDays;
@@ -36,7 +36,7 @@ export class DayViewComponent implements OnInit {
       // (+) converts string 'id' to a number
       // .switchMap((params: Params) => this.service.getHero(+params['id']))
       // .subscribe((hero: Hero) => this.hero = hero);
-    this.cards = this.formDataService.cards;
+    this.cards = this.formDataService.newCards;
   }
 
   dayName(day: Day) {
@@ -51,16 +51,12 @@ export class DayViewComponent implements OnInit {
     this.selectedForm = selection;
   }
 
-  selectedFormFilter(day: Day) {
-    return this.cards.filter(card => (card.formLevel == this.selectedForm) && (card.day === day));
-  }
-
   changeToFormView(ev) {
     // console.log(ev.target.textContent);
   }
   
   showConflicts() {
-    this.conflicts = this.conflictsService.compute(this.cards);
+    // this.conflicts = this.conflictsService.compute(this.cards);
   }
 
   // onChangeMin(min) {

@@ -39,6 +39,14 @@ export class DayViewComponent implements OnInit {
     this.cards = this.formDataService.newCards;
   }
 
+  cardDropped(ev) {
+    // HACK: Only save schedule for single day, because this is getting called for every day
+    if (ev.day == weekDays[1]) {
+      console.log('DayView: cardDropped, save schedule');
+      this.formDataService.saveCards();
+    }
+  }
+
   dayName(day: Day) {
     return Day[day];
   }

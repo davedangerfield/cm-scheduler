@@ -1,8 +1,8 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { DragulaService } from 'ng2-dragula/ng2-dragula';
 
 import { Card } from '../shared/model';
-import { Form, ActivityType, Involvement } from '../shared/enums';
+import { Day, Form, ActivityType, Involvement } from '../shared/enums';
 
 @Component({
   selector: 'app-card-list',
@@ -14,6 +14,9 @@ export class CardListComponent {
 
   @Input() cards: Card[];
   @Input() bag: string; // The dragula 'bag'.
+  @Input() day: Day;
+  @Input() form: Form;
+  @Output() cardDropped = new EventEmitter();
 
   constructor(private dragulaService: DragulaService) {
 
@@ -23,7 +26,10 @@ export class CardListComponent {
     //   revertOnSpill: true // If you drag over a valid container, but drop outside one, card goes back where it started.
     // });
     dragulaService.dropModel.subscribe((value) => {
-      this.onDropModel(value.slice(1));
+      // this.onDropModel(value.slice(1));
+      // Emit an event informing parent to save cards to localstorage.
+      this.cardDropped.emit({day: this.day, form: this.form});
+    
     });
     dragulaService.removeModel.subscribe((value) => {
       this.onRemoveModel(value.slice(1));

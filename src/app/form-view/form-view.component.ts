@@ -30,6 +30,14 @@ export class FormViewComponent implements OnInit {
     this.cards = this.formDataService.newCards;
   }
   
+  cardDropped(ev) {
+    // HACK: Only save schedule for single form, because this is getting called for every form
+    if (ev.form == Form.I) {
+      console.log('FormView: cardDropped, save schedule');
+      this.formDataService.saveCards();
+    }
+  }
+
   dayName(day: Day) {
     return Day[day];
   }

@@ -941,7 +941,7 @@ export var savedSchedule = {
       },
       {
         "activityType": 0,
-        "formLevel": 0,
+        "formLevel": 1,
         "title": "Art Appreciation",
         "daysPerWeek": 1,
         "duration": 10,
@@ -1134,15 +1134,6 @@ export var savedSchedule = {
         "daysPerWeek": 5,
         "duration": 10,
         "teacherInvolvement": 0,
-        "day": 2
-      },
-      {
-        "activityType": 0,
-        "formLevel": 2,
-        "title": "Art Appreciation",
-        "daysPerWeek": 1,
-        "duration": 10,
-        "teacherInvolvement": 2,
         "day": 2
       },
       {
@@ -1405,7 +1396,7 @@ export var savedSchedule = {
       },
       {
         "activityType": 0,
-        "formLevel": 0,
+        "formLevel": 2,
         "title": "Art Appreciation",
         "daysPerWeek": 1,
         "duration": 10,

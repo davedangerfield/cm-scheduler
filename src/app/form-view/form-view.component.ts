@@ -33,7 +33,7 @@ export class FormViewComponent implements OnInit {
   cardDropped(ev) {
     // HACK: Only save schedule for single form, because this is getting called for every form
     if (ev.form == Form.I) {
-      console.log('FormView: cardDropped, save schedule');
+      // console.log('FormView: cardDropped, save schedule');
       this.formDataService.saveCards();
     }
   }

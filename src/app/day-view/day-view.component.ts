@@ -42,7 +42,7 @@ export class DayViewComponent implements OnInit {
   cardDropped(ev) {
     // HACK: Only save schedule for single day, because this is getting called for every day
     if (ev.day == weekDays[1]) {
-      console.log('DayView: cardDropped, save schedule');
+      // console.log('DayView: cardDropped, save schedule');
       this.formDataService.saveCards();
     }
   }
@@ -64,7 +64,7 @@ export class DayViewComponent implements OnInit {
   }
   
   showConflicts() {
-    // this.conflicts = this.conflictsService.compute(this.cards);
+    this.conflicts = this.conflictsService.computeActivityTypeConflicts();
   }
 
   // onChangeMin(min) {

@@ -30,7 +30,7 @@ export class ConflictsService {
             card.conflict = priorCard.conflict = true;
             return;
           }
-          card.conflict = false;
+          delete card.conflict;
         });
       });
     });

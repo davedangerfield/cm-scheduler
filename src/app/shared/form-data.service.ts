@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Card } from './model';
 import { ActivityType, activityTypeFromSymbol, Day, weekDays, Form, allForms, Involvement } from './enums';
 import { formI, formIIA, formIII } from './initial-data';
+import { savedSchedule } from './cm-schedule';
 
 @Injectable()
 export class FormDataService {
@@ -15,7 +16,10 @@ export class FormDataService {
   }
   
   init() {
-
+    if (savedSchedule) {
+      this.newCards = savedSchedule;
+      return;
+    }
     var original = {formI, formIIA, formIII};
     
     var formICards = original.formI.map(toCard(Form.I))

@@ -28,7 +28,7 @@ export var savedSchedule = {
         "teacherInvolvement": 2,
         "day": 1
       },
-{
+      {
         "activityType": 3,
         "formLevel": 0,
         "title": "Recitation",
@@ -37,7 +37,7 @@ export var savedSchedule = {
         "teacherInvolvement": 2,
         "day": 1
       },
-{
+      {
         "activityType": 3,
         "formLevel": 0,
         "title": "Recitation",

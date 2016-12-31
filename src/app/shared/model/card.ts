@@ -8,4 +8,5 @@ export interface Card {
 	day: Day,
 	duration: number,
 	teacherInvolvement: Involvement,
+	conflict?: boolean,
 }

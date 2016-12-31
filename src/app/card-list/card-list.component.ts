@@ -57,6 +57,11 @@ export class CardListComponent {
     return backgroundColorMap[card.formLevel];
   }
 
+  cardDetails(form, card) {
+    if (card.title == 'break') return '';
+    return `${this.formName(form, card)}/${card.daysPerWeek}x/${card.duration}`;
+  }
+
   activityTypeSymbol(card: Card) {
     var activityTypeSymbolMap = {
       [ActivityType.AT]:'@', 
@@ -71,7 +76,11 @@ export class CardListComponent {
     return Form[card.formLevel];
   }
 
-  teacherInvolvement(card: Card) {
+  teacherInvolvementClass(card: Card) {
     return Involvement[card.teacherInvolvement].toLowerCase();
+  }
+
+  conflictClass(card: Card) {
+    return card.conflict ? 'conflict' : '';
   }
 }

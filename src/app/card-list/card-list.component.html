@@ -1,9 +1,10 @@
-<div [dragula]='bag' [dragulaModel]='cards'>
+<div [dragula]="bag" [dragulaModel]="cards">
 	<div  *ngFor="let card of cards" 
-		[style.height.px] = "height(card)" 
-		[style.background-color] = "backgroundColor(card)" class = "card">
-{{activityTypeSymbol(card)}} {{card.title}}<br/>
-{{formName(form, card)}}/{{card.daysPerWeek}}x/{{card.duration}}
-  <div class = "circ {{teacherInvolvement(card)}}"></div>
+		[style.height.px]="height(card)" 
+		[style.background-color]="backgroundColor(card)" class="card {{conflictClass(card)}}">
+		<span>{{activityTypeSymbol(card)}}</span>
+		<span class="card-title">{{card.title}}</span><br/>
+{{cardDetails(form, card)}}
+  	<div *ngIf="card.title != 'break'" class="circ {{teacherInvolvementClass(card)}}"></div>
 	</div>
 </div>

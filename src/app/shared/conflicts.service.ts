@@ -25,8 +25,12 @@ export class ConflictsService {
           var priorCard = array[index-1];
           if (card.activityType != ActivityType.BLANK && 
               card.activityType == priorCard.activityType) {
+            
             conflicts.push(`${formName}-${dayName}: ${priorCard.title} and ${card.title} are of the same activity type`);
+            card.conflict = priorCard.conflict = true;
+            return;
           }
+          card.conflict = false;
         });
       });
     });

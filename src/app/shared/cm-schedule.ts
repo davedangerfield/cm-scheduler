@@ -108,6 +108,96 @@ export var savedSchedule = {
         "duration": 20,
         "teacherInvolvement": 1,
         "day": 1
+      },
+      {
+        "activityType": 3,
+        "formLevel": 0,
+        "title": "break",
+        "daysPerWeek": 10,
+        "duration": 5,
+        "teacherInvolvement": 0,
+        "day": 1
+      },
+      {
+        "activityType": 3,
+        "formLevel": 0,
+        "title": "break",
+        "daysPerWeek": 10,
+        "duration": 5,
+        "teacherInvolvement": 0,
+        "day": 1
+      },
+      {
+        "activityType": 3,
+        "formLevel": 0,
+        "title": "break",
+        "daysPerWeek": 10,
+        "duration": 5,
+        "teacherInvolvement": 0,
+        "day": 1
+      },
+      {
+        "activityType": 3,
+        "formLevel": 0,
+        "title": "break",
+        "daysPerWeek": 10,
+        "duration": 5,
+        "teacherInvolvement": 0,
+        "day": 1
+      },
+      {
+        "activityType": 3,
+        "formLevel": 0,
+        "title": "break",
+        "daysPerWeek": 10,
+        "duration": 5,
+        "teacherInvolvement": 0,
+        "day": 1
+      },
+      {
+        "activityType": 3,
+        "formLevel": 0,
+        "title": "break",
+        "daysPerWeek": 10,
+        "duration": 5,
+        "teacherInvolvement": 0,
+        "day": 1
+      },
+      {
+        "activityType": 3,
+        "formLevel": 0,
+        "title": "break",
+        "daysPerWeek": 10,
+        "duration": 5,
+        "teacherInvolvement": 0,
+        "day": 1
+      },
+      {
+        "activityType": 3,
+        "formLevel": 0,
+        "title": "break",
+        "daysPerWeek": 10,
+        "duration": 5,
+        "teacherInvolvement": 0,
+        "day": 1
+      },
+      {
+        "activityType": 3,
+        "formLevel": 0,
+        "title": "break",
+        "daysPerWeek": 10,
+        "duration": 5,
+        "teacherInvolvement": 0,
+        "day": 1
+      },
+      {
+        "activityType": 3,
+        "formLevel": 0,
+        "title": "break",
+        "daysPerWeek": 10,
+        "duration": 5,
+        "teacherInvolvement": 0,
+        "day": 1
       }
     ],
     "Tuesday": [
@@ -633,6 +723,96 @@ export var savedSchedule = {
         "duration": 30,
         "teacherInvolvement": 0,
         "day": 1
+      },
+      {
+        "activityType": 3,
+        "formLevel": 1,
+        "title": "break",
+        "daysPerWeek": 10,
+        "duration": 5,
+        "teacherInvolvement": 0,
+        "day": 1
+      },
+      {
+        "activityType": 3,
+        "formLevel": 1,
+        "title": "break",
+        "daysPerWeek": 10,
+        "duration": 5,
+        "teacherInvolvement": 0,
+        "day": 1
+      },
+      {
+        "activityType": 3,
+        "formLevel": 1,
+        "title": "break",
+        "daysPerWeek": 10,
+        "duration": 5,
+        "teacherInvolvement": 0,
+        "day": 1
+      },
+      {
+        "activityType": 3,
+        "formLevel": 1,
+        "title": "break",
+        "daysPerWeek": 10,
+        "duration": 5,
+        "teacherInvolvement": 0,
+        "day": 1
+      },
+      {
+        "activityType": 3,
+        "formLevel": 1,
+        "title": "break",
+        "daysPerWeek": 10,
+        "duration": 5,
+        "teacherInvolvement": 0,
+        "day": 1
+      },
+      {
+        "activityType": 3,
+        "formLevel": 1,
+        "title": "break",
+        "daysPerWeek": 10,
+        "duration": 5,
+        "teacherInvolvement": 0,
+        "day": 1
+      },
+      {
+        "activityType": 3,
+        "formLevel": 1,
+        "title": "break",
+        "daysPerWeek": 10,
+        "duration": 5,
+        "teacherInvolvement": 0,
+        "day": 1
+      },
+      {
+        "activityType": 3,
+        "formLevel": 1,
+        "title": "break",
+        "daysPerWeek": 10,
+        "duration": 5,
+        "teacherInvolvement": 0,
+        "day": 1
+      },
+      {
+        "activityType": 3,
+        "formLevel": 1,
+        "title": "break",
+        "daysPerWeek": 10,
+        "duration": 5,
+        "teacherInvolvement": 0,
+        "day": 1
+      },
+      {
+        "activityType": 3,
+        "formLevel": 1,
+        "title": "break",
+        "daysPerWeek": 10,
+        "duration": 5,
+        "teacherInvolvement": 0,
+        "day": 1
       }
     ],
     "Tuesday": [
@@ -1107,6 +1287,96 @@ export var savedSchedule = {
         "teacherInvolvement": 0,
         "day": 1,
         "conflict": true
+      },
+      {
+        "activityType": 3,
+        "formLevel": 2,
+        "title": "break",
+        "daysPerWeek": 10,
+        "duration": 5,
+        "teacherInvolvement": 0,
+        "day": 1
+      },
+      {
+        "activityType": 3,
+        "formLevel": 2,
+        "title": "break",
+        "daysPerWeek": 10,
+        "duration": 5,
+        "teacherInvolvement": 0,
+        "day": 1
+      },
+      {
+        "activityType": 3,
+        "formLevel": 2,
+        "title": "break",
+        "daysPerWeek": 10,
+        "duration": 5,
+        "teacherInvolvement": 0,
+        "day": 1
+      },
+      {
+        "activityType": 3,
+        "formLevel": 2,
+        "title": "break",
+        "daysPerWeek": 10,
+        "duration": 5,
+        "teacherInvolvement": 0,
+        "day": 1
+      },
+      {
+        "activityType": 3,
+        "formLevel": 2,
+        "title": "break",
+        "daysPerWeek": 10,
+        "duration": 5,
+        "teacherInvolvement": 0,
+        "day": 1
+      },
+      {
+        "activityType": 3,
+        "formLevel": 2,
+        "title": "break",
+        "daysPerWeek": 10,
+        "duration": 5,
+        "teacherInvolvement": 0,
+        "day": 1
+      },
+      {
+        "activityType": 3,
+        "formLevel": 2,
+        "title": "break",
+        "daysPerWeek": 10,
+        "duration": 5,
+        "teacherInvolvement": 0,
+        "day": 1
+      },
+      {
+        "activityType": 3,
+        "formLevel": 2,
+        "title": "break",
+        "daysPerWeek": 10,
+        "duration": 5,
+        "teacherInvolvement": 0,
+        "day": 1
+      },
+      {
+        "activityType": 3,
+        "formLevel": 2,
+        "title": "break",
+        "daysPerWeek": 10,
+        "duration": 5,
+        "teacherInvolvement": 0,
+        "day": 1
+      },
+      {
+        "activityType": 3,
+        "formLevel": 2,
+        "title": "break",
+        "daysPerWeek": 10,
+        "duration": 5,
+        "teacherInvolvement": 0,
+        "day": 1
       }
     ],
     "Tuesday": [

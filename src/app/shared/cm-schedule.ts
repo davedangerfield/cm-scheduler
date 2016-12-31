@@ -29,15 +29,6 @@ export var savedSchedule = {
         "day": 1
       },
       {
-        "activityType": 3,
-        "formLevel": 0,
-        "title": "Music Appreciation",
-        "daysPerWeek": 1,
-        "duration": 10,
-        "teacherInvolvement": 1,
-        "day": 2
-      },
-      {
         "activityType": 0,
         "formLevel": 0,
         "title": "Copywork",
@@ -92,18 +83,18 @@ export var savedSchedule = {
         "day": 1
       },
       {
-        "activityType": 2,
+        "activityType": 3,
         "formLevel": 0,
-        "title": "Natural History",
+        "title": "Modern Language 1",
         "daysPerWeek": 3,
         "duration": 10,
         "teacherInvolvement": 2,
         "day": 1
       },
       {
-        "activityType": 3,
+        "activityType": 2,
         "formLevel": 0,
-        "title": "Modern Language 1",
+        "title": "Natural History",
         "daysPerWeek": 3,
         "duration": 10,
         "teacherInvolvement": 2,
@@ -146,15 +137,6 @@ export var savedSchedule = {
         "duration": 10,
         "teacherInvolvement": 2,
         "day": 3
-      },
-      {
-        "activityType": 0,
-        "formLevel": 0,
-        "title": "Art Appreciation",
-        "daysPerWeek": 1,
-        "duration": 10,
-        "teacherInvolvement": 2,
-        "day": 1
       },
       {
         "activityType": 0,
@@ -251,6 +233,15 @@ export var savedSchedule = {
       {
         "activityType": 0,
         "formLevel": 0,
+        "title": "Art Appreciation",
+        "daysPerWeek": 1,
+        "duration": 10,
+        "teacherInvolvement": 2,
+        "day": 1
+      },
+      {
+        "activityType": 0,
+        "formLevel": 0,
         "title": "Copywork",
         "daysPerWeek": 5,
         "duration": 10,
@@ -303,15 +294,6 @@ export var savedSchedule = {
         "day": 3
       },
       {
-        "activityType": 2,
-        "formLevel": 0,
-        "title": "Natural History",
-        "daysPerWeek": 3,
-        "duration": 10,
-        "teacherInvolvement": 2,
-        "day": 3
-      },
-      {
         "activityType": 3,
         "formLevel": 0,
         "title": "Modern Language 1",
@@ -323,11 +305,20 @@ export var savedSchedule = {
       {
         "activityType": 2,
         "formLevel": 0,
-        "title": "Literature \"Tales\"",
+        "title": "Natural History",
+        "daysPerWeek": 3,
+        "duration": 10,
+        "teacherInvolvement": 2,
+        "day": 3
+      },
+      {
+        "activityType": 0,
+        "formLevel": 0,
+        "title": "Drawing",
         "daysPerWeek": 2,
         "duration": 20,
-        "teacherInvolvement": 2,
-        "day": 2
+        "teacherInvolvement": 1,
+        "day": 4
       }
     ],
     "Thursday": [
@@ -422,13 +413,13 @@ export var savedSchedule = {
         "day": 4
       },
       {
-        "activityType": 0,
+        "activityType": 2,
         "formLevel": 0,
-        "title": "Drawing",
+        "title": "Literature \"Tales\"",
         "daysPerWeek": 2,
         "duration": 20,
-        "teacherInvolvement": 1,
-        "day": 4
+        "teacherInvolvement": 2,
+        "day": 2
       }
     ],
     "Friday": [
@@ -449,6 +440,15 @@ export var savedSchedule = {
         "duration": 10,
         "teacherInvolvement": 2,
         "day": 5
+      },
+      {
+        "activityType": 3,
+        "formLevel": 0,
+        "title": "Music Appreciation",
+        "daysPerWeek": 1,
+        "duration": 10,
+        "teacherInvolvement": 1,
+        "day": 2
       },
       {
         "activityType": 0,
@@ -505,18 +505,18 @@ export var savedSchedule = {
         "day": 5
       },
       {
-        "activityType": 2,
+        "activityType": 3,
         "formLevel": 0,
-        "title": "Natural History",
+        "title": "Modern Language 1",
         "daysPerWeek": 3,
         "duration": 10,
         "teacherInvolvement": 2,
         "day": 5
       },
       {
-        "activityType": 3,
+        "activityType": 2,
         "formLevel": 0,
-        "title": "Modern Language 1",
+        "title": "Natural History",
         "daysPerWeek": 3,
         "duration": 10,
         "teacherInvolvement": 2,
@@ -624,15 +624,6 @@ export var savedSchedule = {
         "duration": 30,
         "teacherInvolvement": 0,
         "day": 2
-      },
-      {
-        "activityType": 0,
-        "formLevel": 1,
-        "title": "Dictation",
-        "daysPerWeek": 2,
-        "duration": 20,
-        "teacherInvolvement": 1,
-        "day": 4
       }
     ],
     "Tuesday": [
@@ -684,6 +675,15 @@ export var savedSchedule = {
       {
         "activityType": 3,
         "formLevel": 1,
+        "title": "Geography",
+        "daysPerWeek": 2,
+        "duration": 20,
+        "teacherInvolvement": 0,
+        "day": 2
+      },
+      {
+        "activityType": 3,
+        "formLevel": 1,
         "title": "Play",
         "daysPerWeek": 5,
         "duration": 15,
@@ -700,31 +700,13 @@ export var savedSchedule = {
         "day": 2
       },
       {
-        "activityType": 3,
+        "activityType": 2,
         "formLevel": 1,
-        "title": "Geography",
-        "daysPerWeek": 2,
-        "duration": 20,
-        "teacherInvolvement": 0,
-        "day": 2
-      },
-      {
-        "activityType": 1,
-        "formLevel": 1,
-        "title": "Latin",
-        "daysPerWeek": 2,
+        "title": "Citizenship",
+        "daysPerWeek": 1,
         "duration": 30,
-        "teacherInvolvement": 1,
-        "day": 2
-      },
-      {
-        "activityType": 0,
-        "formLevel": 1,
-        "title": "Dictation",
-        "daysPerWeek": 2,
-        "duration": 20,
-        "teacherInvolvement": 1,
-        "day": 2
+        "teacherInvolvement": 2,
+        "day": 3
       }
     ],
     "Wednesday": [
@@ -783,21 +765,21 @@ export var savedSchedule = {
         "day": 5
       },
       {
+        "activityType": 0,
+        "formLevel": 1,
+        "title": "Dictation",
+        "daysPerWeek": 2,
+        "duration": 20,
+        "teacherInvolvement": 1,
+        "day": 4
+      },
+      {
         "activityType": 3,
         "formLevel": 1,
         "title": "Play",
         "daysPerWeek": 5,
         "duration": 15,
         "teacherInvolvement": 0,
-        "day": 3
-      },
-      {
-        "activityType": 2,
-        "formLevel": 1,
-        "title": "Citizenship",
-        "daysPerWeek": 1,
-        "duration": 30,
-        "teacherInvolvement": 2,
         "day": 3
       },
       {
@@ -812,20 +794,11 @@ export var savedSchedule = {
       {
         "activityType": 1,
         "formLevel": 1,
-        "title": "Grammar",
+        "title": "Latin",
         "daysPerWeek": 2,
-        "duration": 15,
-        "teacherInvolvement": 2,
-        "day": 4
-      },
-      {
-        "activityType": 3,
-        "formLevel": 1,
-        "title": "Geography",
-        "daysPerWeek": 2,
-        "duration": 20,
-        "teacherInvolvement": 0,
-        "day": 4
+        "duration": 30,
+        "teacherInvolvement": 1,
+        "day": 2
       }
     ],
     "Thursday": [
@@ -866,21 +839,21 @@ export var savedSchedule = {
         "day": 4
       },
       {
-        "activityType": 0,
+        "activityType": 2,
         "formLevel": 1,
-        "title": "Dictation",
+        "title": "Ancient History",
         "daysPerWeek": 1,
-        "duration": 10,
-        "teacherInvolvement": 1,
+        "duration": 30,
+        "teacherInvolvement": 0,
         "day": 4
       },
       {
-        "activityType": 1,
+        "activityType": 3,
         "formLevel": 1,
-        "title": "Latin",
+        "title": "Geography",
         "daysPerWeek": 2,
-        "duration": 30,
-        "teacherInvolvement": 1,
+        "duration": 20,
+        "teacherInvolvement": 0,
         "day": 4
       },
       {
@@ -893,12 +866,21 @@ export var savedSchedule = {
         "day": 4
       },
       {
-        "activityType": 2,
+        "activityType": 1,
         "formLevel": 1,
-        "title": "Ancient History",
+        "title": "Grammar",
+        "daysPerWeek": 2,
+        "duration": 15,
+        "teacherInvolvement": 2,
+        "day": 4
+      },
+      {
+        "activityType": 0,
+        "formLevel": 1,
+        "title": "Dictation",
         "daysPerWeek": 1,
-        "duration": 30,
-        "teacherInvolvement": 0,
+        "duration": 10,
+        "teacherInvolvement": 1,
         "day": 4
       },
       {
@@ -958,6 +940,24 @@ export var savedSchedule = {
         "day": 5
       },
       {
+        "activityType": 2,
+        "formLevel": 1,
+        "title": "Natural History",
+        "daysPerWeek": 2,
+        "duration": 20,
+        "teacherInvolvement": 0,
+        "day": 4
+      },
+      {
+        "activityType": 0,
+        "formLevel": 1,
+        "title": "Dictation",
+        "daysPerWeek": 2,
+        "duration": 20,
+        "teacherInvolvement": 1,
+        "day": 2
+      },
+      {
         "activityType": 3,
         "formLevel": 1,
         "title": "Play",
@@ -976,12 +976,12 @@ export var savedSchedule = {
         "day": 5
       },
       {
-        "activityType": 2,
+        "activityType": 1,
         "formLevel": 1,
-        "title": "Natural History",
+        "title": "Latin",
         "daysPerWeek": 2,
-        "duration": 20,
-        "teacherInvolvement": 0,
+        "duration": 30,
+        "teacherInvolvement": 1,
         "day": 4
       }
     ]

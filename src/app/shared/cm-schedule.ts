@@ -1244,7 +1244,7 @@ export var savedSchedule = {
         "activityType": 2,
         "formLevel": 2,
         "title": "Natural History",
-        "daysPerWeek": 3,
+        "daysPerWeek": 4,
         "duration": 40,
         "teacherInvolvement": 0,
         "day": 1
@@ -1417,8 +1417,8 @@ export var savedSchedule = {
         "activityType": 2,
         "formLevel": 2,
         "title": "Natural History",
-        "daysPerWeek": 1,
-        "duration": 45,
+        "daysPerWeek": 4,
+        "duration": 40,
         "teacherInvolvement": 0,
         "day": 2
       },
@@ -1603,7 +1603,7 @@ export var savedSchedule = {
         "activityType": 2,
         "formLevel": 2,
         "title": "Natural History",
-        "daysPerWeek": 3,
+        "daysPerWeek": 4,
         "duration": 40,
         "teacherInvolvement": 0,
         "day": 4
@@ -1695,7 +1695,7 @@ export var savedSchedule = {
         "activityType": 2,
         "formLevel": 2,
         "title": "Natural History",
-        "daysPerWeek": 3,
+        "daysPerWeek": 4,
         "duration": 40,
         "teacherInvolvement": 0,
         "day": 5

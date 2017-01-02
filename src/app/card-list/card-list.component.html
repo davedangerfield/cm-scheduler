@@ -5,6 +5,6 @@
 		<span>{{activityTypeSymbol(card)}}</span>
 		<span class="card-title">{{card.title}}</span><br/>
 {{cardDetails(form, card)}}
-  	<div *ngIf="card.title != 'break'" class="circ {{teacherInvolvementClass(card)}}"></div>
+  	<div *ngIf="card.title != '--'" class="circ {{teacherInvolvementClass(card)}}"></div>
 	</div>
 </div>

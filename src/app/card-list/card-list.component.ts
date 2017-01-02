@@ -58,7 +58,7 @@ export class CardListComponent {
   }
 
   cardDetails(form, card) {
-    if (card.title == 'break') return '';
+    if (card.title == '--') return '';
     return `${this.formName(form, card)}/${card.daysPerWeek}x/${card.duration}`;
   }
 

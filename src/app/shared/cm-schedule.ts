@@ -76,7 +76,7 @@ export var savedSchedule = {
       {
         "activityType": 3,
         "formLevel": 0,
-        "title": "break",
+        "title": "--",
         "daysPerWeek": 10,
         "duration": 5,
         "teacherInvolvement": 0,
@@ -130,7 +130,7 @@ export var savedSchedule = {
       {
         "activityType": 3,
         "formLevel": 0,
-        "title": "break",
+        "title": "--",
         "daysPerWeek": 10,
         "duration": 5,
         "teacherInvolvement": 0,
@@ -139,7 +139,7 @@ export var savedSchedule = {
       {
         "activityType": 3,
         "formLevel": 0,
-        "title": "break",
+        "title": "--",
         "daysPerWeek": 10,
         "duration": 5,
         "teacherInvolvement": 0,
@@ -148,7 +148,7 @@ export var savedSchedule = {
       {
         "activityType": 3,
         "formLevel": 0,
-        "title": "break",
+        "title": "--",
         "daysPerWeek": 10,
         "duration": 5,
         "teacherInvolvement": 0,
@@ -157,7 +157,7 @@ export var savedSchedule = {
       {
         "activityType": 3,
         "formLevel": 0,
-        "title": "break",
+        "title": "--",
         "daysPerWeek": 10,
         "duration": 5,
         "teacherInvolvement": 0,
@@ -166,7 +166,7 @@ export var savedSchedule = {
       {
         "activityType": 3,
         "formLevel": 0,
-        "title": "break",
+        "title": "--",
         "daysPerWeek": 10,
         "duration": 5,
         "teacherInvolvement": 0,
@@ -175,7 +175,7 @@ export var savedSchedule = {
       {
         "activityType": 3,
         "formLevel": 0,
-        "title": "break",
+        "title": "--",
         "daysPerWeek": 10,
         "duration": 5,
         "teacherInvolvement": 0,
@@ -184,7 +184,7 @@ export var savedSchedule = {
       {
         "activityType": 3,
         "formLevel": 0,
-        "title": "break",
+        "title": "--",
         "daysPerWeek": 10,
         "duration": 5,
         "teacherInvolvement": 0,
@@ -193,7 +193,7 @@ export var savedSchedule = {
       {
         "activityType": 3,
         "formLevel": 0,
-        "title": "break",
+        "title": "--",
         "daysPerWeek": 10,
         "duration": 5,
         "teacherInvolvement": 0,
@@ -606,7 +606,7 @@ export var savedSchedule = {
       {
         "activityType": 3,
         "formLevel": 0,
-        "title": "break",
+        "title": "--",
         "daysPerWeek": 10,
         "duration": 5,
         "teacherInvolvement": 0,
@@ -736,7 +736,7 @@ export var savedSchedule = {
       {
         "activityType": 3,
         "formLevel": 1,
-        "title": "break",
+        "title": "--",
         "daysPerWeek": 10,
         "duration": 5,
         "teacherInvolvement": 0,
@@ -745,7 +745,7 @@ export var savedSchedule = {
       {
         "activityType": 3,
         "formLevel": 1,
-        "title": "break",
+        "title": "--",
         "daysPerWeek": 10,
         "duration": 5,
         "teacherInvolvement": 0,
@@ -754,7 +754,7 @@ export var savedSchedule = {
       {
         "activityType": 3,
         "formLevel": 1,
-        "title": "break",
+        "title": "--",
         "daysPerWeek": 10,
         "duration": 5,
         "teacherInvolvement": 0,
@@ -763,7 +763,7 @@ export var savedSchedule = {
       {
         "activityType": 3,
         "formLevel": 1,
-        "title": "break",
+        "title": "--",
         "daysPerWeek": 10,
         "duration": 5,
         "teacherInvolvement": 0,
@@ -772,7 +772,7 @@ export var savedSchedule = {
       {
         "activityType": 3,
         "formLevel": 1,
-        "title": "break",
+        "title": "--",
         "daysPerWeek": 10,
         "duration": 5,
         "teacherInvolvement": 0,
@@ -781,7 +781,7 @@ export var savedSchedule = {
       {
         "activityType": 3,
         "formLevel": 1,
-        "title": "break",
+        "title": "--",
         "daysPerWeek": 10,
         "duration": 5,
         "teacherInvolvement": 0,
@@ -790,7 +790,7 @@ export var savedSchedule = {
       {
         "activityType": 3,
         "formLevel": 1,
-        "title": "break",
+        "title": "--",
         "daysPerWeek": 10,
         "duration": 5,
         "teacherInvolvement": 0,
@@ -873,7 +873,7 @@ export var savedSchedule = {
       {
         "activityType": 3,
         "formLevel": 1,
-        "title": "break",
+        "title": "--",
         "daysPerWeek": 10,
         "duration": 5,
         "teacherInvolvement": 0,
@@ -882,7 +882,7 @@ export var savedSchedule = {
       {
         "activityType": 3,
         "formLevel": 1,
-        "title": "break",
+        "title": "--",
         "daysPerWeek": 10,
         "duration": 5,
         "teacherInvolvement": 0,
@@ -974,7 +974,7 @@ export var savedSchedule = {
       {
         "activityType": 3,
         "formLevel": 1,
-        "title": "break",
+        "title": "--",
         "daysPerWeek": 10,
         "duration": 5,
         "teacherInvolvement": 0,
@@ -1288,7 +1288,7 @@ export var savedSchedule = {
       {
         "activityType": 3,
         "formLevel": 2,
-        "title": "break",
+        "title": "--",
         "daysPerWeek": 10,
         "duration": 5,
         "teacherInvolvement": 0,
@@ -1297,7 +1297,7 @@ export var savedSchedule = {
       {
         "activityType": 3,
         "formLevel": 2,
-        "title": "break",
+        "title": "--",
         "daysPerWeek": 10,
         "duration": 5,
         "teacherInvolvement": 0,
@@ -1306,7 +1306,7 @@ export var savedSchedule = {
       {
         "activityType": 3,
         "formLevel": 2,
-        "title": "break",
+        "title": "--",
         "daysPerWeek": 10,
         "duration": 5,
         "teacherInvolvement": 0,
@@ -1315,7 +1315,7 @@ export var savedSchedule = {
       {
         "activityType": 3,
         "formLevel": 2,
-        "title": "break",
+        "title": "--",
         "daysPerWeek": 10,
         "duration": 5,
         "teacherInvolvement": 0,
@@ -1324,7 +1324,7 @@ export var savedSchedule = {
       {
         "activityType": 3,
         "formLevel": 2,
-        "title": "break",
+        "title": "--",
         "daysPerWeek": 10,
         "duration": 5,
         "teacherInvolvement": 0,
@@ -1333,7 +1333,7 @@ export var savedSchedule = {
       {
         "activityType": 3,
         "formLevel": 2,
-        "title": "break",
+        "title": "--",
         "daysPerWeek": 10,
         "duration": 5,
         "teacherInvolvement": 0,
@@ -1342,7 +1342,7 @@ export var savedSchedule = {
       {
         "activityType": 3,
         "formLevel": 2,
-        "title": "break",
+        "title": "--",
         "daysPerWeek": 10,
         "duration": 5,
         "teacherInvolvement": 0,
@@ -1351,7 +1351,7 @@ export var savedSchedule = {
       {
         "activityType": 3,
         "formLevel": 2,
-        "title": "break",
+        "title": "--",
         "daysPerWeek": 10,
         "duration": 5,
         "teacherInvolvement": 0,
@@ -1360,7 +1360,7 @@ export var savedSchedule = {
       {
         "activityType": 3,
         "formLevel": 2,
-        "title": "break",
+        "title": "--",
         "daysPerWeek": 10,
         "duration": 5,
         "teacherInvolvement": 0,
@@ -1517,7 +1517,7 @@ export var savedSchedule = {
       {
         "activityType": 3,
         "formLevel": 2,
-        "title": "break",
+        "title": "--",
         "daysPerWeek": 10,
         "duration": 5,
         "teacherInvolvement": 0,

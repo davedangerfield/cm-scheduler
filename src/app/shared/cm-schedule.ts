@@ -1280,7 +1280,7 @@ export var savedSchedule = {
         "activityType": 1,
         "formLevel": 2,
         "title": "Grammar",
-        "daysPerWeek": 2,
+        "daysPerWeek": 1,
         "duration": 30,
         "teacherInvolvement": 2,
         "day": 1
@@ -1720,8 +1720,17 @@ export var savedSchedule = {
         "activityType": 1,
         "formLevel": 2,
         "title": "Grammar",
-        "daysPerWeek": 2,
-        "duration": 30,
+        "daysPerWeek": 1,
+        "duration": 20,
+        "teacherInvolvement": 2,
+        "day": 5
+      },
+      {
+        "activityType": 1,
+        "formLevel": 2,
+        "title": "Grammar",
+        "daysPerWeek": 1,
+        "duration": 10,
         "teacherInvolvement": 2,
         "day": 5
       },

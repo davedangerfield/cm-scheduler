@@ -54,12 +54,14 @@ export class CardListComponent {
       [Form.IIA]: '#5ed9ff',
       [Form.III]: '#fcd305',
     }
-    return backgroundColorMap[card.formLevel];
+    // return backgroundColorMap[card.formLevel];
+    return 'white';
   }
 
   cardDetails(form, card) {
     if (card.title == '--') return '';
-    return `${this.formName(form, card)}/${card.daysPerWeek}x/${card.duration}`;
+    // return `${this.formName(form, card)}/${card.daysPerWeek}x/${card.duration}`;
+    return `${card.duration} min.`;
   }
 
   activityTypeSymbol(card: Card) {

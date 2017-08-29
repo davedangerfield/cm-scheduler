@@ -2,9 +2,9 @@
 	<div  *ngFor="let card of cards" 
 		[style.height.px]="height(card)" 
 		[style.background-color]="backgroundColor(card)" class="card {{conflictClass(card)}}">
-		<!--<span>{{activityTypeSymbol(card)}}</span>-->
+		<span>{{activityTypeSymbol(card)}}</span>
 		<span class="card-title">{{card.title}}</span><br/>
 {{cardDetails(form, card)}}
-  	<!--<div *ngIf="card.title != '--'" class="circ {{teacherInvolvementClass(card)}}"></div>-->
+  	<div *ngIf="card.title != '--'" class="circ {{teacherInvolvementClass(card)}}"></div>
 	</div>
 </div>
